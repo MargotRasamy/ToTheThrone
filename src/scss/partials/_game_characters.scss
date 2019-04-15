@@ -1,12 +1,17 @@
 .character {
-  width: 7vw;
-  height: 7vw;
+  width: 7vh;
+  height: 7vh;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 .character#john {
   background: url("../images/characters/john_snow.svg") center 100% no-repeat;
 }
 .character#arya {
-  background: url("../images/characters/arya_starck.svg") center 100% no-repeat;
+  background: url("../images/characters/arya_stark.svg") center 100% no-repeat;
 }
 .character#cersey {
   background: url("../images/characters/cersey_lannister.svg") center 100% no-repeat;

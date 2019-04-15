@@ -1,0 +1,64 @@
+#game {
+  position: relative;
+  height: 77vh;
+  width: 77vh;
+  //margin: 50px auto;
+  #gameGridContainer {
+    display: flex;
+    width: 300vw;
+    position: absolute;
+    left: calc(50% - 3.5vh);
+    top: 0;
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 77vh;
+      height: 77vh;
+      background-color: $background-color;
+      &__elem {
+        width: 7vh;
+        height: 7vh;
+        background-color: #fff;
+      }
+      &__elem0 { // Case inaccessible
+        background-color: $background-color;
+      }
+      &__elem1 { // Case chemin libre
+        background-color: blueviolet;
+      }
+      &__elem2 { // Case chemin pièce
+        background-color: green;
+      }
+      &__elem3 { // Case mur étoile
+        background-color: yellow;
+      }
+      &__elem4 { // Case mur horizontal
+        background-color: grey;
+      }
+      &__elem5 { // Case mur vertical
+        background-color: grey;
+      }
+      &__elem6 { // Case mur angle bas gauche
+        background-color: grey;
+      }
+      &__elem7 { // Case mur angle bas droite
+        background-color: grey;
+      }
+      &__elem8 { // Case mur angle haut gauche
+        background-color: grey;
+      }
+      &__elem9 { // Case mur angle haut droite
+        background-color: grey;
+      }
+      &__elem10 { // Case mur central
+        background-color: grey;
+      }
+      &__elem11 { // Case mort immédiate
+        background-color: darkred;
+      }
+      &__elem12 { // Case mur mortel
+        background-color: orangered;
+      }
+    }
+  }
+}
