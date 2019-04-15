@@ -9,8 +9,15 @@ class Player {
     get relativPosY(){
         return this.posY%11
     }
+    get gridIndex(){
+        return Math.floor(this.posX/11)
+    }
     get relativPosX(){
         return this.posX%11
+    }
+
+    setNewPosX(newRelativePosX,newGridIndex){
+        this.posX = newRelativePosX + newGridIndex * 11
     }
 
 }

@@ -32,19 +32,37 @@ class GameManager {
     }
 
     goRight(){
-        let maxXPos = character.posX
+        let gridIndex = this.player.gridIndex
+        console.log("Grid index : "+gridIndex)
+        let relativeMaxPosX = this.player.relativPosX
         let isAbleToContinue = true
         while (isAbleToContinue){
-            let currentGrid = this.grids[0].matrice
-            console.log(currentGrid)
-            let nextCaseValue = currentGrid[character.posY][maxXPos+1]
-            if (nextCaseValue == 0 || nextCaseValue == 1 || nextCaseValue == 2){
-                maxXPos++
+            console.log("relativeMaxPosX : "+relativeMaxPosX)
+            let currentMatrice = this.grids[gridIndex].matrice
+            let nextCaseValue = currentMatrice[this.player.posY][relativeMaxPosX+1]
+            if (nextCaseValue == 1 || nextCaseValue == 2 || nextCaseValue == 3){
+                relativeMaxPosX++
+                if (relativeMaxPosX+1 > 10) {
+                    gridIndex++
+                    console.log("Grid index : "+gridIndex)
+                    relativeMaxPosX = 0
+                }
             } else {
                 isAbleToContinue = false
             }
         }
-        print(maxXPos)
+        this.player.setNewPosX(relativeMaxPosX,gridIndex)
+        console.log("END :")
+        console.log("Grid index : "+gridIndex)
+        console.log("relativeMaxPosX : "+relativeMaxPosX)
+        console.log(this.player)
+        this.actualizeDisplay()
+    }
+
+    actualizeDisplay(){
+        let translateX = this.player.posX * 7
+        let translateY = (this.player.posY - 5) * 7
+        this.gameGridContainer.style.transform = "translate(-"+ translateX +"vh,-"+ translateY +"vh)"
     }
 
     constructor(gameGridContainer,character){
@@ -53,7 +71,7 @@ class GameManager {
         this.player = new Player(character)
         this.grids = []
         this.matrices = []
-        this.matrices.push([
+/*        this.matrices.push([
             [0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0,0,0],
@@ -65,7 +83,7 @@ class GameManager {
             [0,0,0,0,0,0,0,1,1,0,1],
             [0,0,0,0,0,0,0,0,1,1,1],
             [0,0,0,0,0,0,0,0,0,0,0]
-        ])
+        ])*/
         this.matrices.push([
             [0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,1,1,1,1,0,0,0],
@@ -75,6 +93,19 @@ class GameManager {
             [1,1,1,0,0,1,1,1,0,1,1],
             [0,0,0,0,0,1,0,1,0,0,1],
             [0,0,0,0,0,1,1,1,0,0,1],
+            [0,0,0,0,0,0,0,1,1,0,1],
+            [0,0,0,0,0,0,0,0,1,1,1],
+            [0,0,0,0,0,0,0,0,0,0,0]
+        ])
+        this.matrices.push([
+            [0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0,0,0,0],
+            [0,0,0,0,1,2,2,0,0,0,0],
+            [0,0,1,1,1,0,2,0,0,1,1],
+            [1,1,1,1,2,3,2,1,1,1,1],
+            [0,0,0,0,0,0,0,1,0,0,1],
+            [0,0,0,0,0,0,0,1,0,0,1],
             [0,0,0,0,0,0,0,1,1,0,1],
             [0,0,0,0,0,0,0,0,1,1,1],
             [0,0,0,0,0,0,0,0,0,0,0]
