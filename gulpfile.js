@@ -57,11 +57,10 @@ gulpfile.task('js_game', gulpfile.series('jsLint', 'jsMinifier_game'))
 gulpfile.task('js_landing', gulpfile.series('jsLint', 'jsMinifier_landing'))
 
 gulpfile.task('watch', function() {
-    gulpfile.series('js_game','js_landing','css')
     gulpfile.watch('./src/scripts/game/*.js', gulpfile.series('js_game'))
     gulpfile.watch('./src/scripts/landing_page/*.js', gulpfile.series('js_landing'))
     gulpfile.watch('./src/scripts/main.js', gulpfile.series('js_game', 'js_landing'))
     gulpfile.watch('./src/scss/**/*.scss', gulpfile.series('css'))
 });
 
-gulpfile.task('default', gulpfile.series('watch'));
+gulpfile.task('default', gulpfile.series('js_game','js_landing','css','watch'));
