@@ -1,6 +1,10 @@
 @import "_config.scss";
 
 @import "partials/header";
+@import "partials/landing_page";
+@import "partials/footer";
+@import "partials/game_global";
+@import "partials/game_characters";
 
 body, html {
   height: 100%;
