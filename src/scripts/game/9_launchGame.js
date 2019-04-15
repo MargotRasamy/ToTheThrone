@@ -10,6 +10,7 @@ gameManager.generateANewGrid()
 gameManager.generateANewGrid()
 gameManager.generateANewGrid()
 
+    
 document.onkeypress = function (e) {
     switch (e.code) {
         case "KeyW":

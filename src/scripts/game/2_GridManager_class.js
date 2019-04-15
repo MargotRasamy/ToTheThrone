@@ -27,6 +27,7 @@ class GameManager {
         this.counter++
     }
 
+    
     get lastGrid(){
         return this.grids[this.grids.length - 1]
     }
