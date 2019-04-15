@@ -6,10 +6,10 @@
   overflow: hidden;
   #gameGridContainer {
     display: flex;
-    width: 300vw;
     position: absolute;
     left: calc(50% - 3.5vh);
     top: 0;
+    transition: transform .5s;
     .grid {
       display: flex;
       flex-wrap: wrap;
