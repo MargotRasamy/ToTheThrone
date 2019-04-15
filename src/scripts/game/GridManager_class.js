@@ -18,18 +18,39 @@ class GridManager
 11 => Case mort immédiate
 12 => Case mur mortel
  */
-class GridManager {
+class GameManager {
 
     generateANewGrid() {
         let random = Math.floor(Math.random() * this.matrices.length)
         this.grids.push(new Grid(this.matrices[random]))
+        this.lastGrid.displayInGame(gameGridContainer)
+        this.counter++
     }
 
     get lastGrid(){
         return this.grids[this.grids.length - 1]
     }
 
-    constructor(){
+    goRight(){
+        let maxXPos = character.posX
+        let isAbleToContinue = true
+        while (isAbleToContinue){
+            let currentGrid = this.grids[0].matrice
+            console.log(currentGrid)
+            let nextCaseValue = currentGrid[character.posY][maxXPos+1]
+            if (nextCaseValue == 0 || nextCaseValue == 1 || nextCaseValue == 2){
+                maxXPos++
+            } else {
+                isAbleToContinue = false
+            }
+        }
+        print(maxXPos)
+    }
+
+    constructor(gameGridContainer,character){
+        this.gameGridContainer = gameGridContainer
+        this.counter = 0
+        this.player = new Player(character)
         this.grids = []
         this.matrices = []
         this.matrices.push([

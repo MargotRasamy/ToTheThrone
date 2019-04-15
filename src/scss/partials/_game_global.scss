@@ -1,8 +1,9 @@
 #game {
   position: relative;
   height: 77vh;
-  width: 77vh;
-  //margin: 50px auto;
+  width: 100vw;
+  margin: auto;
+  overflow: hidden;
   #gameGridContainer {
     display: flex;
     width: 300vw;

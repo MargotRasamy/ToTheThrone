@@ -1,3 +1,22 @@
+.character.reversed {
+  transform: scaleX(-1) translate(-50%,-50%);
+}
+.character.toTheTopFromLeft {
+  transform: translate(-50%,-50%) scaleX(-1) rotate(-90deg);
+  transform-origin: center;
+}
+.character.toTheTopFromRight {
+  transform: translate(-50%,-50%) rotate(-90deg);
+  transform-origin: center;
+}
+.character.toTheBottomFromLeft {
+  transform: translate(-50%,-50%) rotate(90deg);
+  transform-origin: center;
+}
+.character.toTheBottomFromRight {
+  transform: translate(-50%,-50%) scaleX(-1) rotate(90deg);
+  transform-origin: center;
+}
 .character {
   width: 7vh;
   height: 7vh;
@@ -6,6 +25,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  transform-origin: left;
+  transition: all .1s;
 }
 .character#john {
   background: url("../images/characters/john_snow.svg") center 100% no-repeat;
