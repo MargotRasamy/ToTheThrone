@@ -9,7 +9,6 @@ const gameManager = new GameManager(gameGridContainer,character)
 gameManager.generateANewGrid()
 gameManager.generateANewGrid()
 gameManager.generateANewGrid()
-
     
 document.onkeypress = function (e) {
     switch (e.code) {
@@ -17,7 +16,7 @@ document.onkeypress = function (e) {
             gameManager.goTop()
             break
         case "KeyA":
-            gameManager.goRight()
+            gameManager.goLeft()
             break
         case "KeyS":
             gameManager.goBottom()

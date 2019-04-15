@@ -20,4 +20,8 @@ class Player {
         this.posX = newRelativePosX + newGridIndex * 11
     }
 
+    goToDeath(){
+        this.character.classList.add("dead")
+    }
+
 }

@@ -17,6 +17,17 @@
   transform: translate(-50%,-50%) scaleX(-1) rotate(90deg);
   transform-origin: center;
 }
+.character.dead::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 7vh;
+  height: 7vh;
+  background: url("../images/effects/death_splatter.svg") center 100% no-repeat;
+}
 .character {
   width: 7vh;
   height: 7vh;
