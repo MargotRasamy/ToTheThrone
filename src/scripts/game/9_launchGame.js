@@ -35,13 +35,16 @@ document.onkeypress = function (e) {
 }
 
 const selector = element('.selector')
-const characters = elements('.character')
+const characters = elements('.characters__character')
 
 for (let i = 0; i < characters.length; i++) {
     characters[i].addEventListener(
         'click',
         function(){
             selector.style.left = 9 + ( i * 18)+"vh"
+            let selectedElem = element(".characters__character.selected")
+            characters[i].classList.add('selected')
+            selectedElem.classList.remove('selected')
         }
     )
     
