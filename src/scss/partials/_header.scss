@@ -1,37 +1,15 @@
 .nav{
+  background:grey;
   &__header{
-    background:grey;
-    width: 85%;
-    margin: 0 auto;
-    
-  }
-  &__header ul{
-    list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-  }
-  &__header ul img{
+    padding: 0 5vw;
     margin: 0 auto;
-    margin-top: 7%;
-    margin-bottom: 7%;
-    margin-left: 15%;
+    img{
+      margin: 15px 0;
+      margin-left: 30px;
+    }
   }
-  &__header__button a{
-    text-decoration: none;
-    color: white;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-  }
-  &__header__button{
-    margin-right: 35px;
-    margin-top: 25px;
-    width: 150px;
-    height: 50px;
-    background-color: blue;
-    border-radius: 10%;
-    position: relative;
-  }
-
 
 }
