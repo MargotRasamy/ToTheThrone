@@ -1,23 +1,25 @@
-.character.reversed {
+.characterContainer.reversed {
   transform: scaleX(-1) translate(-50%,-50%);
 }
-.character.toTheTopFromLeft {
+.characterContainer.toTheTopFromLeft {
   transform: translate(-50%,-50%) scaleX(-1) rotate(-90deg);
   transform-origin: center;
 }
-.character.toTheTopFromRight {
+.characterContainer.toTheTopFromRight {
   transform: translate(-50%,-50%) rotate(-90deg);
   transform-origin: center;
 }
-.character.toTheBottomFromLeft {
+.characterContainer.toTheBottomFromLeft {
   transform: translate(-50%,-50%) rotate(90deg);
   transform-origin: center;
 }
-.character.toTheBottomFromRight {
+.characterContainer.toTheBottomFromRight {
   transform: translate(-50%,-50%) scaleX(-1) rotate(90deg);
   transform-origin: center;
 }
-.character.dead::before {
+
+.characterContainer.dead::before,
+.characterContainer .character::after {
   content: ' ';
   display: block;
   position: absolute;
@@ -26,9 +28,24 @@
   transform: translate(-50%,-50%);
   width: 7vh;
   height: 7vh;
+}
+.characterContainer.dead::before {
   background: url("../images/effects/death_splatter.svg") center 100% no-repeat;
 }
-.character {
+.characterContainer .character::after {
+  transform: translate(-90%,-60%);
+  z-index: -1;
+}
+.characterContainer.isMoving .character::after  {
+  background: url("../images/effects/movement_small.svg") center 100% no-repeat;
+}
+.characterContainer.isMovingFast .character::after {
+  background: url("../images/effects/movement_medium.svg") center 100% no-repeat;
+}
+.characterContainer.isMovingVeryFast .character::after {
+  background: url("../images/effects/movement_large.svg") center 100% no-repeat;
+}
+.characterContainer {
   width: 7vh;
   height: 7vh;
   position: absolute;
@@ -39,28 +56,32 @@
   transform-origin: left;
   transition: all .1s;
 }
-.character.selectionView {
+.characterContainer.selectionView {
   width: 14vh;
   height: 14vh;
   position: static;
   transform: none;
   margin: 0 auto;
 }
-.character#jon {
+.characterContainer .character {
+  height: 100%;
+  width: 100%;
+}
+.characterContainer#jon .character {
   background: url("../images/characters/john_snow.svg") center 100% no-repeat;
 }
-.character#arya {
+.characterContainer#arya .character {
   background: url("../images/characters/arya_stark.svg") center 100% no-repeat;
 }
-.character#cersey {
+.characterContainer#cersey .character {
   background: url("../images/characters/cersey_lannister.svg") center 100% no-repeat;
 }
-.character#tyrion {
+.characterContainer#tyrion .character {
   background: url("../images/characters/tyrion_lannister.svg") center 100% no-repeat;
 }
-.character#daenerys {
+.characterContainer#daenerys .character {
   background: url("../images/characters/daenerys_targaryen.svg") center 100% no-repeat;
 }
-.character#bronn {
+.characterContainer#bronn .character {
   background: url("../images/characters/bronn.svg") center 100% no-repeat;
 }

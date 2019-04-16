@@ -38,6 +38,7 @@ class GameManager {
     }
 
     goRight(){
+        gameManager.player.goRight()
         let cases = []
         let gridIndex = this.player.gridIndex
         let relativeMaxPosX = this.player.relativPosX
@@ -64,11 +65,14 @@ class GameManager {
                 isAbleToContinue = false
             }
         }
+        let oldPosX = this.player.relativPosX
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
-        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX + 1])
+        let deltaPos = oldPosX - this.player.posX
+        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX + 1],deltaPos)
     }
 
     goLeft(){
+        gameManager.player.goLeft()
         let cases = []
         let gridIndex = this.player.gridIndex
         let relativeMaxPosX = this.player.relativPosX
@@ -91,8 +95,10 @@ class GameManager {
                 isAbleToContinue = false
             }
         }
+        let oldPosX = this.player.relativPosX
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
-        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX - 1])
+        let deltaPos = oldPosX - this.player.posX
+        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX - 1],deltaPos)
     }
 
     goTop(){
@@ -112,8 +118,9 @@ class GameManager {
                 isAbleToContinue = false
             }
         }
+        let deltaPos = maxPosY - this.player.posY
         this.player.posY = maxPosY
-        this.actualizeDisplay(cases,[this.player.gridIndex,maxPosY - 1,this.player.relativPosX])
+        this.actualizeDisplay(cases,[this.player.gridIndex,maxPosY - 1,this.player.relativPosX],deltaPos)
     }
 
     goBottom(){
@@ -133,11 +140,13 @@ class GameManager {
                 isAbleToContinue = false
             }
         }
+        let deltaPos = maxPosY - this.player.posY
         this.player.posY = maxPosY
-        this.actualizeDisplay(cases,[this.player.gridIndex,maxPosY + 1,this.player.relativPosX])
+        this.actualizeDisplay(cases,[this.player.gridIndex,maxPosY + 1,this.player.relativPosX],deltaPos)
     }
 
-    actualizeDisplay(cases,nextCase){
+    actualizeDisplay(cases,nextCase,delta){
+        this.player.showMovementEffect(Math.abs(delta))
         let translateX = this.player.posX * 7
         let translateY = (this.player.posY - 5) * 7
         this.gameGridContainer.style.transform = "translate("+ -translateX +"vh,"+ -translateY +"vh)"
@@ -185,6 +194,13 @@ class GameManager {
     endOfTheGame(){
         this.player.goToDeath()
         this.endOfTheGameSection.style.bottom = "10vh"
+        let gameDuration = (Date.now() - this.launchTime) / 1000
+        if (gameDuration >= 60) {
+            element('#lifeDuration').innerHTML = "<span class='bigText'>"+Math.floor(gameDuration/60)+"</span>min <span class='bigText'>"+Math.round(gameDuration % 60)+"</span>s"
+        } else {
+            element('#lifeDuration').innerHTML = "<span class='bigText'>"+ Math.round(gameDuration) +"</span>seconds"
+        }
+        element('#score').innerHTML = Math.round((gameDuration*100) + (this.player.pieces*10) + (this.player.pieces*100))
     }
 
     cleanGame(){
@@ -199,6 +215,7 @@ class GameManager {
         this.generateANewGrid()
         this.generateANewGrid()
         this.generateANewGrid()
+        this.launchTime = Date.now()
     }
 
     constructor(gameGridContainer,character,endOfTheGameSection){

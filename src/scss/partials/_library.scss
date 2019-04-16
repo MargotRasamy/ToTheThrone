@@ -6,6 +6,12 @@ h2 {
 h3 {
   font-size: $font-size-body;
   font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.bigText {
+  font-size: 84px;
+  font-weight: bold;
 }
 a.primary-button {
   padding: 10px 30px;

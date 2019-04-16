@@ -42,6 +42,35 @@ class Player {
         this.posX = 0
         this.stars = 0
         this.pieces = 0
+        this.removeOtherClasses()
+    }
+
+    goRight(){
+        this.removeOtherClasses()
+    }
+    goLeft(){
+        this.removeOtherClasses()
+        this.character.classList.add('reversed')
+    }
+
+    showMovementEffect(delta){
+        if (delta == 1) {
+            this.character.classList.add("isMoving")
+        } else if (delta == 2) {
+            this.character.classList.add("isMovingFast")
+        } else if (delta >= 3) {
+            this.character.classList.add("isMovingVeryFast")
+        }
+        setTimeout(function () {
+            this.character.classList.remove("isMoving","isMovingFast","isMovingVeryFast")
+        }.bind(this),700)
+    }
+
+    removeOtherClasses(){
+        let classes = this.character.classList
+        for (let i = 2; i < classes.length ; i++) {
+            this.character.classList.remove(classes[i])
+        }
     }
 
 }

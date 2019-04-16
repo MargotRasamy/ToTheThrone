@@ -25,7 +25,7 @@
         background: transparent;
       }
       &__elem1 { // Case chemin libre
-        background: url("../images/elements/game_case.png") center 100% no-repeat;
+        background: url("../images/elements/game_case.png") center 100% no-repeat !important;
       }
       &__elem2 { // Case chemin pièce
         background: url("../images/elements/coin_case.png") center 100% no-repeat;

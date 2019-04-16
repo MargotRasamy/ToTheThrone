@@ -1,3 +1,20 @@
+/*
+0 => Case inaccessible
+1 => Case chemin libre
+2 => Case chemin pièce
+3 => Case chemin étoile
+4 => Case mur classique horizontal droit
+5 => Case mur classique horizontal gauche
+6 => Case mur classique vertical haut
+7 => Case mur classique vertical bas
+8 => Case mur angle bas gauche
+9 => Case mur angle bas droite
+10 => Case mur angle haut gauche
+11 => Case mur angle haut droite
+12 => Case mur central
+13 => Case mort immédiate
+14 => Case mur mortel
+ */
 const matrices = [
     [
         [0,0,0,0,0,0,0,0,0,0,0],

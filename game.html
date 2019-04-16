@@ -23,39 +23,48 @@
         <h2>Choose your character</h2>
         <div class="characters">
             <div class="characters__character selected">
-                <div class="character selectionView" id="arya"></div>
+                <div class="characterContainer selectionView" id="arya"><div class="character"></div></div>
                 <h3>Arya</h3>
             </div>
             <div class="characters__character">
-                <div class="character selectionView" id="bronn"></div>
+                <div class="characterContainer selectionView" id="bronn"><div class="character"></div></div>
                 <h3>Bronn</h3>
             </div>
             <div class="characters__character">
-                <div class="character selectionView" id="cersey"></div>
+                <div class="characterContainer selectionView" id="cersey"><div class="character"></div></div>
                 <h3>Cersey</h3>
             </div>
             <div class="characters__character">
-                <div class="character selectionView" id="tyrion"></div>
+                <div class="characterContainer selectionView" id="tyrion"><div class="character"></div></div>
                 <h3>Tyrion</h3>
             </div>
             <div class="characters__character">
-                <div class="character selectionView" id="jon"></div>
+                <div class="characterContainer selectionView" id="jon"><div class="character"></div></div>
                 <h3>Jon</h3>
             </div>
             <div class="characters__character">
-                <div class="character selectionView" id="daenerys"></div>
+                <div class="characterContainer selectionView" id="daenerys"><div class="character"></div></div>
                 <h3>Daenerys</h3>
             </div>
             <div class="selector"></div>
         </div>
         <a id="playNow" class="primary-button" href="#playNow" title="Play Now">Play now</a>
     </div>
-    <div class="character mainCharacter" id="arya"></div>
+    <div class="characterContainer mainCharacter" id="arya">
+        <div class="character"></div>
+        <div id="move"></div>
+        <div id="moveFast"></div>
+        <div id="moveVeryFast"></div>
+    </div>
     <div id="gameGridContainer"></div>
     <div id="endOfTheGame">
         <h2>You are dead !</h2>
         <h3>You are stayed alive during :</h3>
+        <div id="lifeDuration"></div>
         <h3>Your score :</h3>
+        <div>
+            <span id="score" class="bigText"></span>
+        </div>
         <div class="ctasCollection">
             <a class="secondary-button" id="changeCharacter" href="#changeCharacter" title="Change character">Change character</a>
             <a class="primary-button" id="playAgain" href="#playAgain" title="Play again">Play again !</a>
