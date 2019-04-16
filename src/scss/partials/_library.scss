@@ -1,0 +1,18 @@
+h2 {
+  font-size: $font-size-title;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+h3 {
+  font-size: $font-size-body;
+  font-weight: normal;
+}
+a.primary-button {
+  padding: 10px 30px;
+  background-color: $color-primary;
+  text-decoration: none;
+  color: $text-color;
+  font-size: $font-size-body;
+  border-radius: 5px 10px 5px 10px;
+  font-weight: bold;
+}
