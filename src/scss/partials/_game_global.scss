@@ -31,7 +31,7 @@
         background: url("../images/elements/coin_case.png") center 100% no-repeat;
       }
       &__elem3 { // Case mur étoile
-        background-color: yellow;
+        background: url("../images/elements/star_case.png") center 100% no-repeat;
       }
       &__elem4 { // Case mur horizontal droite
         background: url("../images/walls/wall_coin_side_droite.png") center 100% no-repeat;
@@ -61,10 +61,10 @@
         background: url("../images/walls/wall_full.png") center 100% no-repeat;
       }
       &__elem13 { // Case mort immédiate
-        background-color: darkred;
+        background: url("../images/elements/death_case.png") center 100% no-repeat;
       }
       &__elem14 { // Case mur mortel
-        background-color: orangered;
+        background: url("../images/elements/X_case.png") center 100% no-repeat;
       }
     }
   }
