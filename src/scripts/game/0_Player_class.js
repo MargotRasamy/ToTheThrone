@@ -4,6 +4,8 @@ class Player {
         this.posY = 5
         this.posX = 0
         this.character = character
+        this.pieces = 0
+        this.stars = 0
     }
 
     get gridIndex(){
@@ -15,6 +17,15 @@ class Player {
 
     setNewPosX(newRelativePosX,newGridIndex){
         this.posX = newRelativePosX + newGridIndex * 11
+    }
+
+    newPiece(){
+        this.pieces++
+        console.log("Pieces : "+this.pieces)
+    }
+    newStar(){
+        this.stars++
+        console.log("Stars : "+this.stars)
     }
 
     goToDeath(){

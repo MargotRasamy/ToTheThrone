@@ -22,10 +22,10 @@
         background-color: #fff;
       }
       &__elem0 { // Case inaccessible
-        background-color: $background-color;
+        background-color: transparent;
       }
       &__elem1 { // Case chemin libre
-        background-color: blueviolet;
+        background-color: blueviolet !important;
       }
       &__elem2 { // Case chemin pièce
         background-color: green;

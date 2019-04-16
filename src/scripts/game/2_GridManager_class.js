@@ -137,7 +137,6 @@ class GameManager {
     }
 
     actualizeDisplay(cases,nextCase){
-        console.log("actualizeDisplay")
         let translateX = this.player.posX * 7
         let translateY = (this.player.posY - 5) * 7
         this.gameGridContainer.style.transform = "translate("+ -translateX +"vh,"+ -translateY +"vh)"
@@ -145,9 +144,13 @@ class GameManager {
             let caseValue = this.grids[cases[i][0]].matrice[cases[i][1]][cases[i][2]]
             switch (caseValue) {
                 case 2: // pièce
+                    this.player.newPiece()
+                    this.transformSpecialCaseToNormalCase(cases[i])
                     console.log("pièce")
                     break
                 case 3: // étoile
+                    this.player.newStar()
+                    this.transformSpecialCaseToNormalCase(cases[i])
                     console.log("étoile")
                     break
                 case 11: // mort immédiate
@@ -159,15 +162,20 @@ class GameManager {
         this.verifNextCase(nextCase)
     }
 
+    transformSpecialCaseToNormalCase(theCase){
+        this.grids[theCase[0]].matrice[theCase[1]][theCase[2]] = 1
+        let casePos = (theCase[1] * 11) + theCase[2] + 1
+        let caseNode = element('#gameGridContainer .grid:nth-child('+(theCase[0] + 1)+') .grid__elem:nth-child('+casePos+')')
+        caseNode.classList.add("grid__elem1")
+    }
+
     verifNextCase(nextCase){ // 0 => index grid | 1 => posY | 2 => posX
         if (nextCase[2] < 0) {
             nextCase[0] -= 1
             nextCase[2] = 10
         }
-        console.log("verif : "+ nextCase)
         if (nextCase[0] >= 0 && nextCase[1] >= 0 && nextCase[1] <= 10) {
             let caseValue = this.grids[nextCase[0]].matrice[nextCase[1]][nextCase[2]]
-            console.log("verifNextCase : "+caseValue)
             switch (caseValue) {
                 case 12:
                     console.log("mur mortel")
