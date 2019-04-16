@@ -68,7 +68,25 @@ class GameManager {
     - Besoin de bloquer l'utilisateur à la colonne 0 de la grid 0
      */
     goLeft(){
-
+        let gridIndex = this.player.gridIndex
+        let relativeMaxPosX = this.player.relativPosX
+        let isAbleToContinue = true // Permet de quitter la boucle
+        while (isAbleToContinue && (relativeMaxPosX != 0 || gridIndex != 0)){
+            let currentMatrice = this.grids[gridIndex].matrice // Récupérer la matrice sur laquelle le perso est
+            let nextCaseValue = currentMatrice[this.player.posY][relativeMaxPosX-1] // Récupère la valeur de la case précédente
+            if (nextCaseValue == 1 || nextCaseValue == 2 || nextCaseValue == 3 || nextCaseValue == 11){ // SI case avec possibilité de mouvement
+                relativeMaxPosX -= 1 // Diminution de la position max sur X
+                if (relativeMaxPosX - 1 < 0 && gridIndex != 0) {
+                    gridIndex -= 1
+                    relativeMaxPosX = 10
+                }
+            } else {
+                isAbleToContinue = false
+            }
+            console.log(isAbleToContinue+ " ll " + relativeMaxPosX + " ll "+gridIndex)
+        }
+        this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
+        this.actualizeDisplay() // Change la position du gameCridContainer
     }
 
     goTop(){
