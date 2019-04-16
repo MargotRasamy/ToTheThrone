@@ -6,16 +6,19 @@
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
+  height: 100%;
   background-color: $background-color;
   border-radius: 25px 50px 25px 50px;
   z-index: 20;
+  transition: top .5s ease-in-out;
   .characters {
+    position: relative;
     margin: 30px 0;
     display: flex;
+    padding-bottom: 10vh;
     &__character {
-      margin: 0 15px;
+      margin: 0 2vh;
       text-align: center;
       opacity: 0.3;
       cursor: pointer;
@@ -26,6 +29,15 @@
     }
     &__character.selected {
       opacity: 1;
+    }
+    .selector {
+      width: 10vh;
+      height: 10vh;
+      background-color: $color-primary;
+      position: absolute;
+      bottom: 0;
+      left: 9vh;
+      transform: translateX(-50%);
     }
   }
 }

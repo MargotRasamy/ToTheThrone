@@ -16,3 +16,12 @@ a.primary-button {
   border-radius: 5px 10px 5px 10px;
   font-weight: bold;
 }
+a.secondary-button {
+  padding: 10px 30px;
+  border: 2px solid $color-primary;
+  text-decoration: none;
+  color: $text-color;
+  font-size: $font-size-body;
+  border-radius: 5px 10px 5px 10px;
+  font-weight: bold;
+}
