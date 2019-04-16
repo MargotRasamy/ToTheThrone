@@ -1,0 +1,15 @@
+#endOfTheGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 30;
+  bottom: -100vh;
+  left: 10vh;
+  right: 10vh;
+  height: 80vh;
+  border-radius: 25px 50px 25px 50px;
+  background-color: $background-color;
+  transition: bottom .5s ease-in-out;
+}

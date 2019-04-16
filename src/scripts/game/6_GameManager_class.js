@@ -8,23 +8,24 @@ class GridManager
 1 => Case chemin libre
 2 => Case chemin pièce
 3 => Case chemin étoile
-4 => Case mur classique horizontal
-5 => Case mur classique vertical
-6 => Case mur angle bas gauche
-7 => Case mur angle bas droite
-8 => Case mur angle haut gauche
-9 => Case mur angle haut droite
-10 => Case mur central
-11 => Case mort immédiate
-12 => Case mur mortel
+4 => Case mur classique horizontal droit
+5 => Case mur classique horizontal gauche
+6 => Case mur classique vertical haut
+7 => Case mur classique vertical bas
+8 => Case mur angle bas gauche
+9 => Case mur angle bas droite
+10 => Case mur angle haut gauche
+11 => Case mur angle haut droite
+12 => Case mur central
+13 => Case mort immédiate
+14 => Case mur mortel
  */
 class GameManager {
 
     generateANewGrid() {
-        let random = Math.floor(Math.random() * this.matrices.length)
-        this.grids.push(new Grid(this.matrices[random]))
+        let random = Math.floor(Math.random() * matrices.length)
+        this.grids.push(new Grid(matrices[random].clone()))
         this.lastGrid.displayInGame(gameGridContainer)
-        this.counter++
     }
 
     
@@ -33,7 +34,7 @@ class GameManager {
     }
 
     isCaseAvalaible(nextCaseValue){
-        return nextCaseValue == 1 || nextCaseValue == 2 || nextCaseValue == 3 || nextCaseValue == 11
+        return nextCaseValue == 1 || nextCaseValue == 2 || nextCaseValue == 3 || nextCaseValue == 13
     }
 
     goRight(){
@@ -146,18 +147,15 @@ class GameManager {
                 case 2: // pièce
                     this.player.newPiece()
                     this.transformSpecialCaseToNormalCase(cases[i])
-                    console.log("pièce")
                     break
                 case 3: // étoile
                     this.player.newStar()
                     this.transformSpecialCaseToNormalCase(cases[i])
-                    console.log("étoile")
                     break
-                case 11: // mort immédiate
-                    console.log("mort immédiate")
+                case 13: // mort immédiate
+                    this.endOfTheGame()
                     break
             }
-            console.log(cases[i]+ " -> "+caseValue)
         }
         this.verifNextCase(nextCase)
     }
@@ -177,58 +175,37 @@ class GameManager {
         if (nextCase[0] >= 0 && nextCase[1] >= 0 && nextCase[1] <= 10) {
             let caseValue = this.grids[nextCase[0]].matrice[nextCase[1]][nextCase[2]]
             switch (caseValue) {
-                case 12:
-                    console.log("mur mortel")
+                case 14:
+                    this.endOfTheGame()
                     break
             }
         }
     }
 
-    constructor(gameGridContainer,character){
+    endOfTheGame(){
+        this.player.goToDeath()
+        this.endOfTheGameSection.style.bottom = "10vh"
+    }
+
+    cleanGame(){
+        this.gameGridContainer.style.transform = "translate(0vh, 0vh)"
+        this.gameGridContainer.innerHTML = ""
+        this.grids = []
+        this.player.reinitialize()
+        this.endOfTheGameSection.style.bottom = "-100vh"
+    }
+
+    launchNewGame(){
+        this.generateANewGrid()
+        this.generateANewGrid()
+        this.generateANewGrid()
+    }
+
+    constructor(gameGridContainer,character,endOfTheGameSection){
         this.gameGridContainer = gameGridContainer
-        this.counter = 0
+        this.endOfTheGameSection = endOfTheGameSection
         this.player = new Player(character)
         this.grids = []
-        this.matrices = []
-        this.matrices.push([
-            [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,1,2,2,0,0,0,0],
-            [0,0,1,1,1,0,2,0,0,1,1],
-            [1,1,1,0,0,3,2,1,0,1,1],
-            [0,0,0,0,0,0,0,1,0,0,1],
-            [0,0,0,0,0,0,0,1,0,0,1],
-            [0,0,0,0,0,0,0,1,1,0,1],
-            [0,0,0,0,0,0,0,0,1,1,1],
-            [0,0,0,0,0,0,0,0,0,0,0]
-        ])
-        this.matrices.push([
-            [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,12,1,1,1,1,0,0,0],
-            [0,0,0,0,1,0,0,0,0,0,0],
-            [0,0,0,0,1,1,1,0,0,0,0],
-            [0,0,1,1,1,0,1,0,0,1,1],
-            [1,1,1,0,0,1,1,1,0,1,1],
-            [0,0,0,0,0,1,0,1,0,0,1],
-            [0,0,0,0,0,1,1,1,0,0,1],
-            [0,0,0,0,0,0,0,1,1,0,1],
-            [0,0,0,0,0,0,0,0,1,1,1],
-            [0,0,0,0,0,0,0,0,0,0,0]
-        ])
-        this.matrices.push([
-            [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,1,2,2,0,0,0,0],
-            [0,0,1,1,1,0,2,0,0,1,1],
-            [1,1,1,1,2,3,2,1,1,1,1],
-            [0,0,0,0,0,0,0,1,0,0,1],
-            [0,0,0,0,0,0,0,1,0,0,1],
-            [0,0,0,0,0,0,0,1,1,0,1],
-            [0,0,0,0,0,0,0,0,1,1,1],
-            [0,0,0,0,0,0,0,0,0,0,0]
-        ])
     }
 
 }
