@@ -31,9 +31,10 @@
       opacity: 1;
     }
     .selector {
-      width: 10vh;
-      height: 10vh;
+      width: 15vh;
+      height: 15vh;
       background-color: $color-primary;
+      background: url("../images/effects/selector.svg") center no-repeat;
       position: absolute;
       bottom: 0;
       left: 9vh;
