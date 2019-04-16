@@ -1,0 +1,15 @@
+.nav{
+  background:grey;
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    margin: 0 auto;
+    img{
+      margin: 15px 0;
+      margin-left: 30px;
+    }
+  }
+
+}
