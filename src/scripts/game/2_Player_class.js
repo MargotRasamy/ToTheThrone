@@ -28,8 +28,20 @@ class Player {
         console.log("Stars : "+this.stars)
     }
 
+    changeCharacter(newCharacterId){
+        this.character.setAttribute('id',newCharacterId)
+    }
+
     goToDeath(){
         this.character.classList.add("dead")
+    }
+
+    reinitialize(){
+        this.character.classList.remove("dead")
+        this.posY = 5
+        this.posX = 0
+        this.stars = 0
+        this.pieces = 0
     }
 
 }
