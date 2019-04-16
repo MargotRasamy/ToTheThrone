@@ -32,27 +32,31 @@ class GameManager {
         return this.grids[this.grids.length - 1]
     }
 
+    isCaseAvalaible(nextCaseValue){
+        return nextCaseValue == 1 || nextCaseValue == 2 || nextCaseValue == 3 || nextCaseValue == 11
+    }
+
     goRight(){
         let gridIndex = this.player.gridIndex
         let relativeMaxPosX = this.player.relativPosX
         let isAbleToContinue = true // Permet de quitter la boucle
-        while (isAbleToContinue){
-            let currentMatrice = this.grids[gridIndex].matrice // Récupérer la matrice sur laquelle le perso est
-            let nextCaseValue = currentMatrice[this.player.posY][relativeMaxPosX+1] // Récupère la valeur de la prochaine case
-            if (nextCaseValue == 1 || nextCaseValue == 2 || nextCaseValue == 3 || nextCaseValue == 11){ // SI case avec possibilité de mouvement
+        while (isAbleToContinue) {
+            let nextCaseValue
+            if (relativeMaxPosX + 1 > 10) {
+                nextCaseValue = this.grids[gridIndex + 1].matrice[this.player.posY][0] // Récupère la valeur de la prochaine case
+            } else {
+                nextCaseValue = this.grids[gridIndex].matrice[this.player.posY][relativeMaxPosX + 1] // Récupère la valeur de la prochaine case
+            }
+            if (this.isCaseAvalaible(nextCaseValue)) { // SI case avec possibilité de mouvement
                 relativeMaxPosX++ // Augmentation de la position max sur X
-
-                // Si on sort de la grille actuelle
-                if (relativeMaxPosX+1 > 10) {
+                if (relativeMaxPosX > 10) {
                     gridIndex++ // On passe à la grille suivante
                     relativeMaxPosX = 0 // On revient à la première colonne de la grille suivante
-
                     // Si on a pas assez de grilles en place -> en générer
-                    while (this.grids.length < gridIndex + 3){
+                    while (this.grids.length < gridIndex + 3) {
                         this.generateANewGrid()
                     }
                 }
-
             } else {
                 isAbleToContinue = false
             }
@@ -61,46 +65,73 @@ class GameManager {
         this.actualizeDisplay() // Change la position du gameCridContainer
     }
 
-    /*
-    Globalement l'inverse de goRight
-    SAUF QUE
-    - pas besoin de générer des nouvelles grilles
-    - Besoin de bloquer l'utilisateur à la colonne 0 de la grid 0
-     */
     goLeft(){
         let gridIndex = this.player.gridIndex
         let relativeMaxPosX = this.player.relativPosX
         let isAbleToContinue = true // Permet de quitter la boucle
         while (isAbleToContinue && (relativeMaxPosX != 0 || gridIndex != 0)){
-            let currentMatrice = this.grids[gridIndex].matrice // Récupérer la matrice sur laquelle le perso est
-            let nextCaseValue = currentMatrice[this.player.posY][relativeMaxPosX-1] // Récupère la valeur de la case précédente
-            if (nextCaseValue == 1 || nextCaseValue == 2 || nextCaseValue == 3 || nextCaseValue == 11){ // SI case avec possibilité de mouvement
+            let nextCaseValue
+            if (relativeMaxPosX - 1 < 0 && gridIndex != 0) {
+                nextCaseValue = this.grids[gridIndex - 1].matrice[this.player.posY][10] // Récupère la valeur de la case précédente
+            } else {
+                nextCaseValue = this.grids[gridIndex].matrice[this.player.posY][relativeMaxPosX-1] // Récupère la valeur de la case précédente
+            }
+            if (this.isCaseAvalaible(nextCaseValue)){ // SI case avec possibilité de mouvement
                 relativeMaxPosX -= 1 // Diminution de la position max sur X
-                if (relativeMaxPosX - 1 < 0 && gridIndex != 0) {
+                if (relativeMaxPosX - 2 < 0 && gridIndex != 0) {
                     gridIndex -= 1
                     relativeMaxPosX = 10
                 }
             } else {
                 isAbleToContinue = false
             }
-            console.log(isAbleToContinue+ " ll " + relativeMaxPosX + " ll "+gridIndex)
         }
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
         this.actualizeDisplay() // Change la position du gameCridContainer
     }
 
     goTop(){
-
+        let maxPosY = this.player.posY
+        let currentMatrice = this.grids[this.player.gridIndex].matrice
+        let isAbleToContinue = true
+        while (isAbleToContinue){
+            let nextCaseValue = currentMatrice[maxPosY-1][this.player.relativPosX]
+            if (this.isCaseAvalaible(nextCaseValue)){
+                maxPosY -= 1
+                if (maxPosY - 1 < 0) {
+                    isAbleToContinue = false
+                }
+            } else {
+                isAbleToContinue = false
+            }
+        }
+        this.player.posY = maxPosY
+        this.actualizeDisplay()
     }
 
     goBottom(){
-
+        let maxPosY = this.player.posY
+        let currentMatrice = this.grids[this.player.gridIndex].matrice
+        let isAbleToContinue = true
+        while (isAbleToContinue){
+            let nextCaseValue = currentMatrice[maxPosY+1][this.player.relativPosX]
+            if (this.isCaseAvalaible(nextCaseValue)){
+                maxPosY++
+                if (maxPosY + 1 > 10) {
+                    isAbleToContinue = false
+                }
+            } else {
+                isAbleToContinue = false
+            }
+        }
+        this.player.posY = maxPosY
+        this.actualizeDisplay()
     }
 
     actualizeDisplay(){
         let translateX = this.player.posX * 7
         let translateY = (this.player.posY - 5) * 7
-        this.gameGridContainer.style.transform = "translate(-"+ translateX +"vh,-"+ translateY +"vh)"
+        this.gameGridContainer.style.transform = "translate("+ -translateX +"vh,"+ -translateY +"vh)"
     }
 
     constructor(gameGridContainer,character){

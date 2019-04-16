@@ -6,9 +6,6 @@ class Player {
         this.character = character
     }
 
-    get relativPosY(){
-        return this.posY%11
-    }
     get gridIndex(){
         return Math.floor(this.posX/11)
     }
