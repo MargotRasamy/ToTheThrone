@@ -1,3 +1,32 @@
+.gameInformations {
+  display: flex;
+  justify-content: flex-end;
+  &__info {
+    margin-right: 60px;
+  }
+}
+#game::before {
+  content: ' ';
+  display: block;
+  width: 50vw;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(0.25turn, $background-color, rgba(29,28,28,0));
+}
+#game::after {
+  content: ' ';
+  display: block;
+  width: 20vw;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0.75turn, $background-color, rgba(29,28,28,0));
+}
 #game {
   position: relative;
   height: 77vh;
@@ -10,12 +39,12 @@
     left: calc(50% - 3.5vh);
     top: 0;
     transition: transform .5s;
+    background: linear-gradient($background-color,$color-primary,$background-color);
     .grid {
       display: flex;
       flex-wrap: wrap;
       width: 77vh;
       height: 77vh;
-      background-color: $background-color; 
       &__elem {
         width: 7vh;
         height: 7vh;

@@ -154,7 +154,7 @@ class GameManager {
             let caseValue = this.grids[cases[i][0]].matrice[cases[i][1]][cases[i][2]]
             switch (caseValue) {
                 case 2: // pièce
-                    this.player.newPiece()
+                    this.player.newCoin()
                     this.transformSpecialCaseToNormalCase(cases[i])
                     break
                 case 3: // étoile
@@ -200,7 +200,7 @@ class GameManager {
         } else {
             element('#lifeDuration').innerHTML = "<span class='bigText'>"+ Math.round(gameDuration) +"</span>seconds"
         }
-        element('#score').innerHTML = Math.round((gameDuration*100) + (this.player.pieces*10) + (this.player.pieces*100))
+        element('#score').innerHTML = Math.round((gameDuration*100) + (this.player.coins*50) + (this.player.stars*250))
     }
 
     cleanGame(){

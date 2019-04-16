@@ -4,8 +4,10 @@ class Player {
         this.posY = 5
         this.posX = 0
         this.character = character
-        this.pieces = 0
+        this.coins = 0
+        this.coinsInfo = element("#coins")
         this.stars = 0
+        this.starsInfo = element("#stars")
     }
 
     get gridIndex(){
@@ -19,12 +21,14 @@ class Player {
         this.posX = newRelativePosX + newGridIndex * 11
     }
 
-    newPiece(){
-        this.pieces++
-        console.log("Pieces : "+this.pieces)
+    newCoin(){
+        this.coins++
+        this.coinsInfo.innerHTML = this.coins+" coins"
+        console.log("coins : "+this.coins)
     }
     newStar(){
         this.stars++
+        this.starsInfo.innerHTML = this.stars+ " stars"
         console.log("Stars : "+this.stars)
     }
 
@@ -40,8 +44,10 @@ class Player {
         this.character.classList.remove("dead")
         this.posY = 5
         this.posX = 0
+        this.coins = 0
+        this.coinsInfo.innerHTML = this.coins+ " coins"
         this.stars = 0
-        this.pieces = 0
+        this.starsInfo.innerHTML = this.stars+ " stars"
         this.removeOtherClasses()
     }
 
