@@ -33,3 +33,16 @@ document.onkeypress = function (e) {
             break
     }
 }
+
+const selector = element('.selector')
+const characters = elements('.character')
+
+for (let i = 0; i < characters.length; i++) {
+    characters[i].addEventListener(
+        'click',
+        function(){
+            selector.style.left = 9 + ( i * 18)+"vh"
+        }
+    )
+    
+}
