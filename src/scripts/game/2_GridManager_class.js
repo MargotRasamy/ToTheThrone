@@ -37,6 +37,7 @@ class GameManager {
     }
 
     goRight(){
+        let cases = []
         let gridIndex = this.player.gridIndex
         let relativeMaxPosX = this.player.relativPosX
         let isAbleToContinue = true // Permet de quitter la boucle
@@ -57,15 +58,17 @@ class GameManager {
                         this.generateANewGrid()
                     }
                 }
+                cases.push([gridIndex,this.player.posY,relativeMaxPosX])
             } else {
                 isAbleToContinue = false
             }
         }
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
-        this.actualizeDisplay() // Change la position du gameCridContainer
+        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX + 1])
     }
 
     goLeft(){
+        let cases = []
         let gridIndex = this.player.gridIndex
         let relativeMaxPosX = this.player.relativPosX
         let isAbleToContinue = true // Permet de quitter la boucle
@@ -82,15 +85,17 @@ class GameManager {
                     gridIndex -= 1
                     relativeMaxPosX = 10
                 }
+                cases.push([gridIndex,this.player.posY,relativeMaxPosX])
             } else {
                 isAbleToContinue = false
             }
         }
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
-        this.actualizeDisplay() // Change la position du gameCridContainer
+        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX - 1])
     }
 
     goTop(){
+        let cases = []
         let maxPosY = this.player.posY
         let currentMatrice = this.grids[this.player.gridIndex].matrice
         let isAbleToContinue = true
@@ -101,15 +106,17 @@ class GameManager {
                 if (maxPosY - 1 < 0) {
                     isAbleToContinue = false
                 }
+                cases.push([this.player.gridIndex,maxPosY,this.player.relativPosX])
             } else {
                 isAbleToContinue = false
             }
         }
         this.player.posY = maxPosY
-        this.actualizeDisplay()
+        this.actualizeDisplay(cases,[this.player.gridIndex,maxPosY - 1,this.player.relativPosX])
     }
 
     goBottom(){
+        let cases = []
         let maxPosY = this.player.posY
         let currentMatrice = this.grids[this.player.gridIndex].matrice
         let isAbleToContinue = true
@@ -120,18 +127,53 @@ class GameManager {
                 if (maxPosY + 1 > 10) {
                     isAbleToContinue = false
                 }
+                cases.push([this.player.gridIndex,maxPosY,this.player.relativPosX])
             } else {
                 isAbleToContinue = false
             }
         }
         this.player.posY = maxPosY
-        this.actualizeDisplay()
+        this.actualizeDisplay(cases,[this.player.gridIndex,maxPosY + 1,this.player.relativPosX])
     }
 
-    actualizeDisplay(){
+    actualizeDisplay(cases,nextCase){
+        console.log("actualizeDisplay")
         let translateX = this.player.posX * 7
         let translateY = (this.player.posY - 5) * 7
         this.gameGridContainer.style.transform = "translate("+ -translateX +"vh,"+ -translateY +"vh)"
+        for (let i = 0; i < cases.length ; i++) {
+            let caseValue = this.grids[cases[i][0]].matrice[cases[i][1]][cases[i][2]]
+            switch (caseValue) {
+                case 2: // pièce
+                    console.log("pièce")
+                    break
+                case 3: // étoile
+                    console.log("étoile")
+                    break
+                case 11: // mort immédiate
+                    console.log("mort immédiate")
+                    break
+            }
+            console.log(cases[i]+ " -> "+caseValue)
+        }
+        this.verifNextCase(nextCase)
+    }
+
+    verifNextCase(nextCase){ // 0 => index grid | 1 => posY | 2 => posX
+        if (nextCase[2] < 0) {
+            nextCase[0] -= 1
+            nextCase[2] = 10
+        }
+        console.log("verif : "+ nextCase)
+        if (nextCase[0] >= 0 && nextCase[1] >= 0 && nextCase[1] <= 10) {
+            let caseValue = this.grids[nextCase[0]].matrice[nextCase[1]][nextCase[2]]
+            console.log("verifNextCase : "+caseValue)
+            switch (caseValue) {
+                case 12:
+                    console.log("mur mortel")
+                    break
+            }
+        }
     }
 
     constructor(gameGridContainer,character){
@@ -155,7 +197,7 @@ class GameManager {
         ])
         this.matrices.push([
             [0,0,0,0,0,0,0,0,0,0,0],
-            [0,0,0,0,1,1,1,1,0,0,0],
+            [0,0,0,12,1,1,1,1,0,0,0],
             [0,0,0,0,1,0,0,0,0,0,0],
             [0,0,0,0,1,1,1,0,0,0,0],
             [0,0,1,1,1,0,1,0,0,1,1],
