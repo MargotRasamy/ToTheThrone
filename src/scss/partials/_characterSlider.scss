@@ -1,0 +1,51 @@
+.parent{
+
+    background: url("../images/background/website/throne_background.png");
+    
+
+    &__slider{
+        width: 500px;
+        height: 1000px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    
+        &__container {
+            position: absolute;
+            display: flex;
+            transition: ease-in 0.3s all;
+            will-change: left;
+
+            img{
+                width: 70px;
+                height: auto;
+                
+                
+            }
+      }
+    }
+
+
+
+    .previous {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        background: green;
+        padding: 10px;
+        border-radius: 50%;
+    }
+      
+    .next {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        background: green;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+}
+
+
+
