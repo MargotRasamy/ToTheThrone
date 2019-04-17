@@ -3,15 +3,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 
     &__bigDiv1{
-        
+        display: flex;
+        flex-direction: column;
     }
     &__bigDiv2{
-
+        display: flex;
+        flex-direction: column;
     }
     &__bigDiv3{
-
+        display: flex;
+        flex-direction: column;
     }
 
 
