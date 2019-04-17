@@ -37,6 +37,7 @@
     display: flex;
     position: absolute;
     left: calc(50% - 3.5vh);
+    transform: translate(-154vh,0vh);
     top: 0;
     transition: transform .5s;
     background: linear-gradient($background-color,$color-primary,$background-color);
@@ -55,45 +56,59 @@
       }
       &__elem1 { // Case chemin libre
         background: url("../images/elements/game_case.png") center 100% no-repeat !important;
+        background-size: 100% 100% !important;
       }
       &__elem2 { // Case chemin pièce
         background: url("../images/elements/coin_case.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem3 { // Case mur étoile
         background: url("../images/elements/star_case.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem4 { // Case mur horizontal droite
         background: url("../images/walls/wall_coin_side_droite.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem5 { // Case mur horizontal gauche
         background: url("../images/walls/wall_side_gauche.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem6 { // Case mur vertical haut
         background: url("../images/walls/wall_side_haut.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem7 { // Case mur vertical bas
         background: url("../images/walls/wall_side_bas.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem8 { // Case mur angle bas gauche
         background: url("../images/walls/wall_basgauche.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem9 { // Case mur angle bas droite
         background: url("../images/walls/wall_coin_basdroite.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem10 { // Case mur angle haut gauche
         background: url("../images/walls/wall_coin_hautgauche.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem11 { // Case mur angle haut droite
         background: url("../images/walls/wall_coin_hautdroite.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem12 { // Case mur central
         background: url("../images/walls/wall_full.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem13 { // Case mort immédiate
         background: url("../images/elements/death_case.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
       &__elem14 { // Case mur mortel
         background: url("../images/elements/death_wall.png") center 100% no-repeat;
+        background-size: 100% 100%;
       }
     }
   }

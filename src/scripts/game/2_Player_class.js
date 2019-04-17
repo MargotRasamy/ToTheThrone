@@ -2,7 +2,7 @@ class Player {
 
     constructor(character){
         this.posY = 5
-        this.posX = 0
+        this.posX = 22
         this.character = character
         this.coins = 0
         this.coinsInfo = element("#coins")
@@ -43,7 +43,7 @@ class Player {
     reinitialize(){
         this.character.classList.remove("dead")
         this.posY = 5
-        this.posX = 0
+        this.posX = 22
         this.coins = 0
         this.coinsInfo.innerHTML = this.coins+ " coins"
         this.stars = 0

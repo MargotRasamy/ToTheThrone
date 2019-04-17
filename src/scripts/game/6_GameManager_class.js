@@ -22,10 +22,32 @@ class GridManager
  */
 class GameManager {
 
+    constructor(gameGridContainer,character,endOfTheGameSection){
+        this.gameGridContainer = gameGridContainer
+        this.endOfTheGameSection = endOfTheGameSection
+        this.player = new Player(character)
+        this.grids = []
+        this.mainTheme = element('#got_main_theme')
+        this.mainTheme.volume = 0.2
+        this.deathSound = element('#death_sound')
+    }
+
+    launchNewGame(){
+        this.mainTheme.play();
+        for (let i = 0; i < initMatrices.length; i++) {
+            this.grids.push(new Grid(initMatrices[i]))
+            this.lastGrid.displayInGame(this.gameGridContainer)
+        }
+        this.generateANewGrid()
+        this.generateANewGrid()
+        this.generateANewGrid()
+        this.launchTime = Date.now()
+    }
+
     generateANewGrid() {
         let random = Math.floor(Math.random() * matrices.length)
         this.grids.push(new Grid(matrices[random].clone()))
-        this.lastGrid.displayInGame(gameGridContainer)
+        this.lastGrid.displayInGame(this.gameGridContainer)
     }
 
     
@@ -150,16 +172,18 @@ class GameManager {
         let translateX = this.player.posX * 7
         let translateY = (this.player.posY - 5) * 7
         this.gameGridContainer.style.transform = "translate("+ -translateX +"vh,"+ -translateY +"vh)"
-        for (let i = 0; i < cases.length ; i++) {
+        let numberOfCase = cases.length
+        console.log("cases.length : "+numberOfCase)
+        for (let i = 0; i < numberOfCase ; i++) {
             let caseValue = this.grids[cases[i][0]].matrice[cases[i][1]][cases[i][2]]
             switch (caseValue) {
                 case 2: // pièce
                     this.player.newCoin()
-                    this.transformSpecialCaseToNormalCase(cases[i])
+                    this.transformSpecialCaseToNormalCase(cases[i],i,numberOfCase)
                     break
                 case 3: // étoile
                     this.player.newStar()
-                    this.transformSpecialCaseToNormalCase(cases[i])
+                    this.transformSpecialCaseToNormalCase(cases[i],i,numberOfCase)
                     break
                 case 13: // mort immédiate
                     this.endOfTheGame()
@@ -169,11 +193,14 @@ class GameManager {
         this.verifNextCase(nextCase)
     }
 
-    transformSpecialCaseToNormalCase(theCase){
-        this.grids[theCase[0]].matrice[theCase[1]][theCase[2]] = 1
-        let casePos = (theCase[1] * 11) + theCase[2] + 1
-        let caseNode = element('#gameGridContainer .grid:nth-child('+(theCase[0] + 1)+') .grid__elem:nth-child('+casePos+')')
-        caseNode.classList.add("grid__elem1")
+    transformSpecialCaseToNormalCase(theCase,i,tot){
+        console.log(theCase + " at pos "+i+ " sur tot : "+ tot + " || timeout : "+(i/(tot-1)) * 500)
+        setTimeout(function () {
+            this.grids[theCase[0]].matrice[theCase[1]][theCase[2]] = 1
+            let casePos = (theCase[1] * 11) + theCase[2] + 1
+            let caseNode = element('#gameGridContainer .grid:nth-child('+(theCase[0] + 1)+') .grid__elem:nth-child('+casePos+')')
+            caseNode.classList.add("grid__elem1")
+        }.bind(this), ((i+1)/tot) * 450 )
     }
 
     verifNextCase(nextCase){ // 0 => index grid | 1 => posY | 2 => posX
@@ -192,6 +219,9 @@ class GameManager {
     }
 
     endOfTheGame(){
+        this.mainTheme.pause()
+        this.mainTheme.currentTime = 0;
+        this.deathSound.play()
         this.player.goToDeath()
         this.endOfTheGameSection.style.bottom = "10vh"
         let gameDuration = (Date.now() - this.launchTime) / 1000
@@ -204,25 +234,11 @@ class GameManager {
     }
 
     cleanGame(){
-        this.gameGridContainer.style.transform = "translate(0vh, 0vh)"
+        this.gameGridContainer.style.transform = "translate(-154vh, 0vh)"
         this.gameGridContainer.innerHTML = ""
         this.grids = []
         this.player.reinitialize()
         this.endOfTheGameSection.style.bottom = "-100vh"
-    }
-
-    launchNewGame(){
-        this.generateANewGrid()
-        this.generateANewGrid()
-        this.generateANewGrid()
-        this.launchTime = Date.now()
-    }
-
-    constructor(gameGridContainer,character,endOfTheGameSection){
-        this.gameGridContainer = gameGridContainer
-        this.endOfTheGameSection = endOfTheGameSection
-        this.player = new Player(character)
-        this.grids = []
     }
 
 }
