@@ -58,13 +58,64 @@ header{
 }
 
 .game_preview{
-    background-image: ("assets/images/background/website/throne_background.png");
-    margin: 1vh 10vw;
-    padding: 8vh 10vw;
+    
+    padding: 10vh 10vw;
 
     h1{
         text-align: center;
         margin-top: 2vh;
+    }
+
+    .game_description{
+
+        p{
+
+        }
 
     }
+
+    .obstacles{
+        h2{
+    
+        }
+        .death{
+            background-color: rgba(255,255,255, 0.2);
+            margin: 10vh 10vw;
+            padding: 5vh 5vw;
+
+            img{
+                width: 8vw;
+                height: 8vw;
+
+            }
+
+            image.wall{
+
+            }
+
+        }
+
+    }
+    
+    .collect{
+        h2{
+    
+        }
+        .gains{
+            background-color: rgba(255,255,255, 0.2);
+            margin: 10vh 10vw;
+            padding: 5vh 5vw;
+
+            img{
+                width: 8vw;
+                height: 8vw;
+            }
+
+        }
+
+
+    }
+
+
+
 }
