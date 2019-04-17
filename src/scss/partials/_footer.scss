@@ -1,3 +1,18 @@
 .footer{
     background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__bigDiv1{
+        
+    }
+    &__bigDiv2{
+
+    }
+    &__bigDiv3{
+
+    }
+
+
 }
