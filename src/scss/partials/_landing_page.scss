@@ -1,9 +1,9 @@
 header{
     background-image:url("../images/background/website/mountain_background.png");
-    padding-bottom: 10vh;
+    padding: 10vh 0;
     background-size: cover;
-    background-position: center;
-
+    background-position-y: -30vh;
+    background-attachment: fixed;
 }
 
 .main_logo{

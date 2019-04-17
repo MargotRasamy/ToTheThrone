@@ -22,6 +22,7 @@
   width: 100vw;
   margin: auto;
   overflow: hidden;
+  margin-top: 15vh;
   #winter {
     width: 50vw;
     position: absolute;
@@ -59,9 +60,7 @@
         background-color: #fff;
       }
       &__elem0 { // Case inaccessible
-        //background: transparent;
-        background: url("../images/walls/wall_full.png") center 100% no-repeat;
-        background-size: 100% 100%;
+        background: transparent;
       }
       &__elem1 { // Case chemin libre
         background: url("../images/elements/game_case.png") center 100% no-repeat !important;

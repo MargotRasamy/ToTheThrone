@@ -63,6 +63,7 @@ function keyPress(code){
 changeCharacterButton.addEventListener('click',function (e) {
     e.preventDefault()
     gameManager.cleanGame()
+    gameManager.mainTheme.pause()
     chooseCharacterSection.style.top = "0%"
 })
 
