@@ -69,36 +69,38 @@ header{
     .game_description{
 
         p{
-
+            font-size: 24px;
+            margin-top: 8vw;
+            margin-right: 5vw;
+            line-height: 7vh;
         }
 
     }
 
     .obstacles{
         h2{
+            margin-top: 17vh;
+            margin-bottom: 17vh;
     
         }
         .death{
             background-color: rgba(255,255,255, 0.2);
-            margin: 10vh 10vw;
-            padding: 5vh 5vw;
+            margin: 20wv;
+            margin-bottom: 10vh;
 
             img{
                 width: 8vw;
                 height: 8vw;
-
+                padding: 1vw;
             }
-
-            image.wall{
-
-            }
-
         }
 
     }
     
     .collect{
         h2{
+            margin-top: 17vh;
+            margin-bottom: 17vh;
     
         }
         .gains{
@@ -111,6 +113,11 @@ header{
                 height: 8vw;
             }
 
+        }
+
+        p{
+            font-size: 18px;
+           
         }
 
 
