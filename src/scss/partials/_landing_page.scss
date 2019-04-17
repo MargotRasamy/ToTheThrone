@@ -27,7 +27,7 @@ header{
 main{
     background-color: rgba(255,255,255, 0.5);
     margin: auto;
-    padding: 50vh;
+    padding: 8vh;
 }
 
 .game_info{
@@ -37,8 +37,28 @@ main{
         justify-content: space-between;
 
         img{
-            
+            width: 41vw;
+            height: 24.7vw;
+            margin-top: 8vw;
+            margin-left: 3vw;
+            margin-right: 7vw;
+            margin-bottom: 4vh;
+
+
         }
+
+        p{
+            font-size: 24px;
+            margin-top: 8vw;
+            margin-right: 5vw;
+            line-height: 7vh;
+        }
+    }
+
+    h1{
+        text-align: center;
+        margin-top: 2vh;
+
     }
 
 }
