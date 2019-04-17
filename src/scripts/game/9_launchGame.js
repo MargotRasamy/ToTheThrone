@@ -61,3 +61,7 @@ playAgain.addEventListener('click',function (e) {
     gameManager.cleanGame()
     gameManager.launchNewGame()
 })
+
+setInterval(function () {
+    gameManager.actualizeTimeBeforeDeath()
+},250)

@@ -8,6 +8,7 @@ class Player {
         this.coinsInfo = element("#coins")
         this.stars = 0
         this.starsInfo = element("#stars")
+        this.movementCounter = 0
     }
 
     get gridIndex(){
@@ -24,12 +25,10 @@ class Player {
     newCoin(){
         this.coins++
         this.coinsInfo.innerHTML = this.coins+" coins"
-        console.log("coins : "+this.coins)
     }
     newStar(){
         this.stars++
         this.starsInfo.innerHTML = this.stars+ " stars"
-        console.log("Stars : "+this.stars)
     }
 
     changeCharacter(newCharacterId){
@@ -48,6 +47,7 @@ class Player {
         this.coinsInfo.innerHTML = this.coins+ " coins"
         this.stars = 0
         this.starsInfo.innerHTML = this.stars+ " stars"
+        this.movementCounter = 0
         this.removeOtherClasses()
     }
 
@@ -60,6 +60,7 @@ class Player {
     }
 
     showMovementEffect(delta){
+        this.movementCounter = (delta == 0) ? this.movementCounter : this.movementCounter + 1
         if (delta == 1) {
             this.character.classList.add("isMoving")
         } else if (delta == 2) {

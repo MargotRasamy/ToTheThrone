@@ -30,6 +30,9 @@ class GameManager {
         this.mainTheme = element('#got_main_theme')
         this.mainTheme.volume = 0.2
         this.deathSound = element('#death_sound')
+        this.timeRemainingLabel = element('#timeRemaining')
+        this.winter = element('#winter')
+        this.deathTime = null
     }
 
     launchNewGame(){
@@ -87,7 +90,7 @@ class GameManager {
                 isAbleToContinue = false
             }
         }
-        let oldPosX = this.player.relativPosX
+        let oldPosX = this.player.posX
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
         let deltaPos = oldPosX - this.player.posX
         this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX + 1],deltaPos)
@@ -117,7 +120,7 @@ class GameManager {
                 isAbleToContinue = false
             }
         }
-        let oldPosX = this.player.relativPosX
+        let oldPosX = this.player.posX
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
         let deltaPos = oldPosX - this.player.posX
         this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX - 1],deltaPos)
@@ -167,13 +170,33 @@ class GameManager {
         this.actualizeDisplay(cases,[this.player.gridIndex,maxPosY + 1,this.player.relativPosX],deltaPos)
     }
 
+    actualizeTimeBeforeDeath(){
+        if (this.deathTime != null){
+            this.timeRemainingLabel.innerHTML = Math.floor((this.deathTime - Date.now())/100)/10 +"s before death"
+            this.winter.style.width = 100 - ((this.deathTime - Date.now())/80) + "vw"
+        } else {
+            this.winter.style.width = "50vw"
+            this.timeRemainingLabel.innerHTML = "Go !"
+        }
+    }
+
     actualizeDisplay(cases,nextCase,delta){
         this.player.showMovementEffect(Math.abs(delta))
+        if (delta != 0){
+            // Reset le temps restant
+            console.log("log normal : "+Math.log(this.player.movementCounter))
+            //console.log("log 1p : "+Math.log1p(this.player.movementCounter))
+            //console.log("log 2 : "+Math.log2(this.player.movementCounter))
+            console.log("log 10 : "+Math.log10(this.player.movementCounter))
+            let timeRemovedMs = Math.log(this.player.movementCounter) - Math.log10(this.player.movementCounter)
+            let lifeSpan = 3000 - timeRemovedMs * 1000
+            console.log(lifeSpan)
+            this.deathTime = Date.now() + lifeSpan
+        }
         let translateX = this.player.posX * 7
         let translateY = (this.player.posY - 5) * 7
         this.gameGridContainer.style.transform = "translate("+ -translateX +"vh,"+ -translateY +"vh)"
         let numberOfCase = cases.length
-        console.log("cases.length : "+numberOfCase)
         for (let i = 0; i < numberOfCase ; i++) {
             let caseValue = this.grids[cases[i][0]].matrice[cases[i][1]][cases[i][2]]
             switch (caseValue) {
@@ -194,7 +217,6 @@ class GameManager {
     }
 
     transformSpecialCaseToNormalCase(theCase,i,tot){
-        console.log(theCase + " at pos "+i+ " sur tot : "+ tot + " || timeout : "+(i/(tot-1)) * 500)
         setTimeout(function () {
             this.grids[theCase[0]].matrice[theCase[1]][theCase[2]] = 1
             let casePos = (theCase[1] * 11) + theCase[2] + 1
@@ -231,6 +253,7 @@ class GameManager {
             element('#lifeDuration').innerHTML = "<span class='bigText'>"+ Math.round(gameDuration) +"</span>seconds"
         }
         element('#score').innerHTML = Math.round((gameDuration*100) + (this.player.coins*50) + (this.player.stars*250))
+        this.deathTime = null
     }
 
     cleanGame(){
