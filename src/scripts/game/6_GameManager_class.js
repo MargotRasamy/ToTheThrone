@@ -3,23 +3,6 @@
 class GridManager
 -----------
 */
-/*
-0 => Case inaccessible
-1 => Case chemin libre
-2 => Case chemin pièce
-3 => Case chemin étoile
-4 => Case mur classique horizontal droit
-5 => Case mur classique horizontal gauche
-6 => Case mur classique vertical haut
-7 => Case mur classique vertical bas
-8 => Case mur angle bas gauche
-9 => Case mur angle bas droite
-10 => Case mur angle haut gauche
-11 => Case mur angle haut droite
-12 => Case mur central
-13 => Case mort immédiate
-14 => Case mur mortel
- */
 class GameManager {
 
     constructor(gameGridContainer,character,endOfTheGameSection){
@@ -33,6 +16,9 @@ class GameManager {
         this.timeRemainingLabel = element('#timeRemaining')
         this.winter = element('#winter')
         this.deathTime = null
+        this.deathReason = document.querySelector('#deathReason')
+        this.lifeSpan = 3000
+        this.waitingActions = []
     }
 
     launchNewGame(){
@@ -111,7 +97,7 @@ class GameManager {
             }
             if (this.isCaseAvalaible(nextCaseValue)){ // SI case avec possibilité de mouvement
                 relativeMaxPosX -= 1 // Diminution de la position max sur X
-                if (relativeMaxPosX - 2 < 0 && gridIndex != 0) {
+                if (relativeMaxPosX - 1 < 0 && gridIndex != 0) {
                     gridIndex -= 1
                     relativeMaxPosX = 10
                 }
@@ -172,26 +158,25 @@ class GameManager {
 
     actualizeTimeBeforeDeath(){
         if (this.deathTime != null){
-            this.timeRemainingLabel.innerHTML = Math.floor((this.deathTime - Date.now())/100)/10 +"s before death"
-            this.winter.style.width = 100 - ((this.deathTime - Date.now())/80) + "vw"
-        } else {
-            this.winter.style.width = "50vw"
-            this.timeRemainingLabel.innerHTML = "Go !"
+            if (this.deathTime - Date.now() <= 0) {
+                this.timeRemainingLabel.innerHTML = "It's time to death"
+                this.winter.style.width = "150vw";
+                this.endOfTheGame(0)
+            } else {
+                this.timeRemainingLabel.innerHTML = Math.floor((this.deathTime - Date.now())/100)/10 +"s before death"
+                this.winter.style.width = 100 - 50 * ((this.deathTime - Date.now())/this.lifeSpan) + "vw"
+            }
         }
     }
 
     actualizeDisplay(cases,nextCase,delta){
         this.player.showMovementEffect(Math.abs(delta))
         if (delta != 0){
-            // Reset le temps restant
-            console.log("log normal : "+Math.log(this.player.movementCounter))
-            //console.log("log 1p : "+Math.log1p(this.player.movementCounter))
-            //console.log("log 2 : "+Math.log2(this.player.movementCounter))
-            console.log("log 10 : "+Math.log10(this.player.movementCounter))
             let timeRemovedMs = Math.log(this.player.movementCounter) - Math.log10(this.player.movementCounter)
-            let lifeSpan = 3000 - timeRemovedMs * 1000
-            console.log(lifeSpan)
-            this.deathTime = Date.now() + lifeSpan
+            if (this.lifeSpan > 300){
+                this.lifeSpan = (3000 - timeRemovedMs * 1000 >= 300) ? 3000 - timeRemovedMs * 1000 : 300
+            }
+            this.deathTime = Date.now() + this.lifeSpan
         }
         let translateX = this.player.posX * 7
         let translateY = (this.player.posY - 5) * 7
@@ -209,7 +194,7 @@ class GameManager {
                     this.transformSpecialCaseToNormalCase(cases[i],i,numberOfCase)
                     break
                 case 13: // mort immédiate
-                    this.endOfTheGame()
+                    this.endOfTheGame(1)
                     break
             }
         }
@@ -234,15 +219,24 @@ class GameManager {
             let caseValue = this.grids[nextCase[0]].matrice[nextCase[1]][nextCase[2]]
             switch (caseValue) {
                 case 14:
-                    this.endOfTheGame()
+                    this.endOfTheGame(2)
                     break
             }
         }
+        this.realizeNextMovement()
     }
 
-    endOfTheGame(){
-        this.mainTheme.pause()
-        this.mainTheme.currentTime = 0;
+    realizeNextMovement(){
+        setTimeout(function () {
+            if (this.waitingActions.length > 0){
+                keyPress(this.waitingActions[0])
+                this.waitingActions.splice(0,1)
+            }
+        }.bind(this),400)
+    }
+
+    endOfTheGame(deathReason){
+        this.waitingActions = []
         this.deathSound.play()
         this.player.goToDeath()
         this.endOfTheGameSection.style.bottom = "10vh"
@@ -252,16 +246,26 @@ class GameManager {
         } else {
             element('#lifeDuration').innerHTML = "<span class='bigText'>"+ Math.round(gameDuration) +"</span>seconds"
         }
-        element('#score').innerHTML = Math.round((gameDuration*100) + (this.player.coins*50) + (this.player.stars*250))
+        if (deathReason == 0){
+            this.deathReason.innerHTML = "Winter took you the life... be faster to stay alive"
+        } else if (deathReason == 1){
+            this.deathReason.innerHTML = "Fire is really dangerous... take care of your life next time"
+        } else {
+            this.deathReason.innerHTML = "Remember : A wall covered with Valerian iron spikes is not your friend..."
+        }
+        element('#score').innerHTML = Math.round((gameDuration*100) + (this.player.coins*50) + (this.player.stars*250)).toLocaleString('fr')
         this.deathTime = null
     }
 
     cleanGame(){
+        this.mainTheme.currentTime = 0;
         this.gameGridContainer.style.transform = "translate(-154vh, 0vh)"
         this.gameGridContainer.innerHTML = ""
         this.grids = []
         this.player.reinitialize()
         this.endOfTheGameSection.style.bottom = "-100vh"
+        this.winter.style.width = "50vw"
+        this.timeRemainingLabel.innerHTML = "Go !"
     }
 
 }

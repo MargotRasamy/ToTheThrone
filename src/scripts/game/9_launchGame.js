@@ -34,19 +34,29 @@ playNowButton.addEventListener('click',function (e) {
 })
     
 document.onkeypress = function (e) {
-    switch (e.code) {
-        case "KeyW":
-            gameManager.goTop()
-            break
-        case "KeyA":
-            gameManager.goLeft()
-            break
-        case "KeyS":
-            gameManager.goBottom()
-            break
-        case "KeyD":
-            gameManager.goRight()
-            break
+    if (gameManager.player.isAlive){
+        keyPress(e.code)
+    }
+}
+
+function keyPress(code){
+    if (gameManager.player.isMoving){
+        gameManager.waitingActions.push(code)
+    } else {
+        switch (code) {
+            case "KeyW":
+                gameManager.goTop()
+                break
+            case "KeyA":
+                gameManager.goLeft()
+                break
+            case "KeyS":
+                gameManager.goBottom()
+                break
+            case "KeyD":
+                gameManager.goRight()
+                break
+        }
     }
 }
 

@@ -9,6 +9,8 @@ class Player {
         this.stars = 0
         this.starsInfo = element("#stars")
         this.movementCounter = 0
+        this.isAlive = true
+        this.isMoving = false
     }
 
     get gridIndex(){
@@ -36,10 +38,13 @@ class Player {
     }
 
     goToDeath(){
+        this.isAlive = false
         this.character.classList.add("dead")
     }
 
     reinitialize(){
+        this.isMoving = false
+        this.isAlive = true
         this.character.classList.remove("dead")
         this.posY = 5
         this.posX = 22
@@ -61,16 +66,22 @@ class Player {
 
     showMovementEffect(delta){
         this.movementCounter = (delta == 0) ? this.movementCounter : this.movementCounter + 1
-        if (delta == 1) {
-            this.character.classList.add("isMoving")
-        } else if (delta == 2) {
-            this.character.classList.add("isMovingFast")
-        } else if (delta >= 3) {
-            this.character.classList.add("isMovingVeryFast")
+        this.isMoving = (delta != 0)
+        if (delta != 0) {
+            if (delta == 1) {
+                this.character.classList.add("isMoving")
+            } else if (delta == 2) {
+                this.character.classList.add("isMovingFast")
+            } else if (delta >= 3) {
+                this.character.classList.add("isMovingVeryFast")
+            }
+            setTimeout(function () {
+                this.isMoving = false
+            }.bind(this),400)
+            setTimeout(function () {
+                this.character.classList.remove("isMoving","isMovingFast","isMovingVeryFast")
+            }.bind(this),700)
         }
-        setTimeout(function () {
-            this.character.classList.remove("isMoving","isMovingFast","isMovingVeryFast")
-        }.bind(this),700)
     }
 
     removeOtherClasses(){

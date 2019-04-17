@@ -16,7 +16,12 @@
     <link rel="stylesheet" href="assets/styles/main.min.css">
 </head>
 <body>
-<a href="index.html" title="Accueil">Revenir à l'accueil</a>
+<nav class="nav">
+    <div class="nav__header">
+        <a href="index.html" title="To The Throne - Welcome"><img src="assets/images/landing_page/logo_nav.svg" alt="logo"></a>
+        <a class="primary-button" href="game.html" title="To The Throne - Game">Play Now</a>
+    </div>
+</nav>
 
 <div class="gameInformations">
     <div id="coins" class="gameInformations__info">O coins</div>
@@ -64,7 +69,7 @@
     <div id="timeRemaining"></div>
     <div id="gameGridContainer"></div>
     <div id="endOfTheGame">
-        <h2>You are dead !</h2>
+        <h2 id="deathReason">You are dead !</h2>
         <h3>You stayed alive during :</h3>
         <div id="lifeDuration"></div>
         <h3>Your score :</h3>
