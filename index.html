@@ -24,23 +24,24 @@
         </div>
     </nav>
     <header>
+        <h1>To The Throne - the official game of thrones game</h1>
             <div class="main">
-                <img class="main_logo" src="assets/images/landing_page/logo_nav.svg" alt="logo">
+                <img class="mainLogo" src="assets/images/landing_page/logo_nav.svg" alt="logo">
             </div>
-            <div class="video_section">
-                <iframe width="806" height="453" src="https://www.youtube.com/embed/_hNxfiXmeAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="videoSection">
+                <iframe class="videoSection__Iframe" src="https://www.youtube.com/embed/_hNxfiXmeAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
     </header>
     <main>
-        <div class="game_info">
-            <h1>A FIGHT AGAINST THE CLOCK</h1>
-            <div class="game_info_clock">
-                <img src="assets/images/landing_page/example_clock.PNG" alt="example">
-                <p>Time to survive! To The Throne is the newest official game from the makers of Game Of Thrones. Jump into its dark world while picking your favorite character and play quick matches with your friends.</p>
+        <section>
+            <h2>A FIGHT AGAINST THE CLOCK</h2>
+            <div class="gameInfoContainer">
+                <img class="gameInfoContainer__mediumImage" src="assets/images/landing_page/example_clock.PNG" alt="ToTheTrone example gameplay" >
+                <p class="withMargeLeft">Time to survive! To The Throne is the newest official game from the makers of Game Of Thrones. Jump into its dark world while picking your favorite character and play quick matches with your friends.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="gameCharacters">
+        <section class="gameCharacters">
             <h2>CHOOSE YOUR FAVORITE CHARACTER</h2>
             <div id="sliderGoRight" class="gameCharacters__arrow goRight"></div>
             <div id="sliderGoLeft" class="gameCharacters__arrow goLeft"></div>
@@ -57,35 +58,35 @@
             <div class="ctaContainer">
                 <a href="game.html" title="Play To The Throne" class="primary-button">Play now</a>
             </div>
-        </div>
-
-        <div class="game_preview">
-                <h1>BEWARE OF THE TRAPS</h1>
-
-                <div class="game_description">
-                    <p>The Great Houses of the Seven Crown are preparing for the coming winter, determined to annihilate the common enemy: the white marchers. In this mini-game, work for the cause and collect as many gold coins as you can. This will allow the northern army to buy food and build the necessary weapons.</p>
-                </div>
-                <div class="obstacles">
-                        <h2>DEADLY OBSTACLES</h2>
-                        <div class="death">
-                            <img src="assets/images/elements/death_case.png" alt="case">
-                            <img src="assets/images/elements/death_wall.png" alt="wall">
-                        </div>
-                        <div class="death_description">
-                        <p>Beware of these traps, they can lead you to an early end. Fire will incinerate you, the death wall will end you, and most of all beware of the fast coming winter storm...</p>
-                        </div>
-                </div>
-                <div class="collect">
-                        <h2>COLLECT THEM ALL!</h2>
-                        <div class="gains">
-                            <img src="assets/images/elements/coin_case.png" alt="coin">
-                            <img src="assets/images/elements/star_case.png" alt="star">
-                            <p></p>
-                        </div>
-                </div>
-                <img src="assets/images/landing_page/wasd.jpg" alt="wasd">
+        </section>
+        <section class="game_preview">
+            <h2>BEWARE OF THE TRAPS</h2>
+            <div class="gameInfoContainer">
+                <p class="reducedWidth">The Great Houses of the Seven Crown are preparing for the coming winter, determined to annihilate the common enemy: the white marchers. In this mini-game, work for the cause and collect as many gold coins as you can. This will allow the northern army to buy food and build the necessary weapons.</p>
             </div>
-
+            <h2>DEADLY OBSTACLES</h2>
+            <div class="gameInfoContainer">
+                <div class="gameInfoContainer__visual left">
+                    <img class="gameInfoContainer__visual__screen" src="assets/images/background/website/dragon_background.png" alt="To the thrones obstacles">
+                    <div class="gameInfoContainer__visual__exemples">
+                        <img class="gameInfoContainer__visual__exemples__item" src="assets/images/elements/death_case.jpg" alt="Death case in the game">
+                        <img class="gameInfoContainer__visual__exemples__item" src="assets/images/elements/death_wall.png" alt="Dangerous wall in the game">
+                    </div>
+                </div>
+                <p class="withMargeLeft">Beware of these traps, they can lead you to an early end. Fire will incinerate you, the death wall will end you, and most of all beware of the fast coming winter storm...</p>
+            </div>
+            <h2>COLLECT THEM ALL!</h2>
+            <div class="gameInfoContainer">
+                <p class="withMargeRight">Bring prosperity back to the houses, work for the cause and collect as many gold coins and stars as you can.</p>
+                <div class="gameInfoContainer__visual right">
+                    <div class="gameInfoContainer__visual__exemples">
+                        <img src="assets/images/elements/coin_case.jpg" alt="Coin case in the game">
+                        <img src="assets/images/elements/star_case.jpg" alt="Star case in the game">
+                    </div>
+                    <img class="gameInfoContainer__visual__screen" src="assets/images/background/website/dragon_background.png" alt="To the thrones obstacles">
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

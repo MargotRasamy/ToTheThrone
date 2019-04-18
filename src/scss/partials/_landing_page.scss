@@ -1,133 +1,61 @@
 header{
     background-image:url("../images/background/website/mountain_background.png");
-    padding: 10vh 0;
+    padding: 15vh 0 10vh 0;
     background-size: cover;
     background-position-y: -30vh;
     background-attachment: fixed;
 }
 
-.main_logo{
- width: 41vw;
- height: 43vw;
- margin-left: 9vw;
- margin-bottom: 1vh;
+.ctaContainer {
+    text-align: center;
+    padding: 5vh 10vw;
 }
 
-.video_section{
-    background-color: rgba(255,255,255, 0.5);
+.mainLogo{
+    height: 40vh;
+    margin: 10vh 0 10vh 10vw;
+}
+
+.videoSection{
+    background-color: $background-white-transparent;
+    border-radius: 5px;
     margin: 1vh 10vw;
     padding: 8vh 10vw;
-    iframe {
+    &__Iframe {
         width: 60vw;
         height: 33.7vw;
     }
 }
-
-.game_info{
-    background-color: rgba(255,255,255, 0.5);
-    margin: auto;
-    padding: 8vh;
-
-    &_clock{
+.gameInfoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10vh;
+    &__mediumImage {
+        width: 40vw;
+    }
+    &__visual {
         display: flex;
-        justify-content: space-between;
-
-        img{
-            width: 41vw;
-            height: 24.7vw;
-            margin-top: 8vw;
-            margin-left: 3vw;
-            margin-right: 7vw;
-
+        width: 40vw;
+        background-color: $background-white-transparent;
+        padding: 1vw;
+        border-radius: 5px;
+        &__screen {
+            width: 30vw;
+            height: 20vw;
+            border-radius: 5px;
         }
-
-        p{
-            font-size: 24px;
-            margin-top: 8vw;
-            margin-right: 5vw;
-            line-height: 7vh;
-        }
-    }
-
-    h1{
-        text-align: center;
-        margin-top: 2vh;
-
-    }
-
-}
-
-.game_preview{
-    
-    padding: 10vh 10vw;
-
-    h1{
-        text-align: center;
-        margin-top: 2vh;
-    }
-
-    .game_description{
-
-        p{
-            font-size: 24px;
-            margin-top: 8vw;
-            margin-right: 5vw;
-            line-height: 7vh;
-        }
-
-    }
-
-    .obstacles{
-        h2{
-            margin-top: 17vh;
-            margin-bottom: 17vh;
-        }
-        
-        .death{
-            background-color: rgba(255,255,255, 0.2);
-            margin: 20wv;
-            margin-bottom: 10vh;
-
-            img{
-                width: 8vw;
-                height: 8vw;
-                padding: 1vw;
+        &__exemples {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 5vw;
+            padding: 0 2vw 0 3vw;
+            &__item {
+                width: 100%;
+                border-radius: 5px;
             }
         }
-
     }
-    
-    .collect{
-        h2{
-            margin-top: 17vh;
-            margin-bottom: 17vh;
-    
-        }
-        .gains{
-            background-color: rgba(255,255,255, 0.2);
-            margin: 10vh 10vw;
-            padding: 5vh 5vw;
-
-            img{
-                width: 8vw;
-                height: 8vw;
-            }
-
-        }
-
-        p{
-            font-size: 18px;
-           
-        }
-
-
-    }
-
-
-
-}
-
-.ctaContainer {
-    text-align: center;
-    padding: 5vh 10vw;
 }
