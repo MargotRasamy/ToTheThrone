@@ -3,6 +3,7 @@
 Global
 -----------
 */
+const KEY_tttScore = "ttt_score"
 function element(selector) {
     return document.querySelector(selector)
 }

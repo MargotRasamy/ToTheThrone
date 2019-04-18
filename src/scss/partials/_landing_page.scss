@@ -64,4 +64,19 @@ header{
     background-image:url("../images/background/website/dragon_background.png");
     background-size: cover;
     background-attachment: fixed;
+    &__leaderboard {
+        color: $background-color;
+        padding: 4vh 2vw;
+        width: 30vw;
+        background-color: $background-white-transparent;
+        border-radius: 5px;
+        &__score {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4vh;
+        }
+        &__score:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

@@ -64,6 +64,6 @@ section {
   background-color: $background-color;
   padding: 10vh 10vw;
 }
-section div:last-child {
+section .gameInfoContainer:last-child {
   margin-bottom: 0;
 }

@@ -1,6 +1,16 @@
 .gameInformations {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 5vh;
+  top: 5vh;
+  width: 50vw;
+  z-index: 15;
+  &__icon {
+    margin-right: 10px;
+    height: 20px;
+  }
   &__info {
     margin-right: 60px;
   }
@@ -18,11 +28,10 @@
 }
 #game {
   position: relative;
-  height: 77vh;
+  height: 85vh;
   width: 100vw;
-  margin: auto;
   overflow: hidden;
-  margin-top: 15vh;
+  margin: 15vh auto auto;
   #winter {
     width: 50vw;
     position: absolute;
@@ -46,8 +55,8 @@
     position: absolute;
     left: calc(50% - 3.5vh);
     transform: translate(-154vh,0vh);
-    top: 0;
-    transition: transform .5s ease-in-out;
+    top: 4vh;
+    transition: transform .4s ease-in-out;
     background: linear-gradient($background-color,$color-primary,$background-color);
     .grid {
       display: flex;

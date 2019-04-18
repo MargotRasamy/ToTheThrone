@@ -239,7 +239,6 @@ class GameManager {
         this.waitingActions = []
         this.deathSound.play()
         this.player.goToDeath()
-        this.endOfTheGameSection.style.bottom = "10vh"
         let gameDuration = (Date.now() - this.launchTime) / 1000
         if (gameDuration >= 60) {
             element('#lifeDuration').innerHTML = "<span class='bigText'>"+Math.floor(gameDuration/60)+"</span>min <span class='bigText'>"+Math.round(gameDuration % 60)+"</span>s"
@@ -253,8 +252,16 @@ class GameManager {
         } else {
             this.deathReason.innerHTML = "Remember : A wall covered with Valerian iron spikes is not your friend..."
         }
-        element('#score').innerHTML = Math.round((gameDuration*100) + (this.player.coins*50) + (this.player.stars*250)).toLocaleString('fr')
+        let score = Math.round((gameDuration*100) + (this.player.coins*50) + (this.player.stars*250))
+        element('#score').innerHTML = score.toLocaleString('fr')
+        let oldScore = parseInt(localStorage.getItem(KEY_tttScore))
+        if (oldScore < score || isNaN(oldScore)){
+            localStorage.setItem(KEY_tttScore,score)
+        }
         this.deathTime = null
+        setTimeout(function () {
+            this.endOfTheGameSection.style.bottom = "2.5vh"
+        }.bind(this),600)
     }
 
     cleanGame(){
