@@ -1,51 +1,56 @@
-.parent{
-
-    background: url("../images/background/website/throne_background.png");
-    
-
-    &__slider{
-        width: 500px;
-        height: 1000px;
-        margin: 0 auto;
+.gameCharacters {
+    background-size: cover;
+    background: url("../images/background/website/throne_background.png") no-repeat fixed center;
+    padding: 10vh 10vw;
+    position: relative;
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 7vw;
+        height: 7vw;
+        background-color: #00FF00;
+        background-size: 80% auto;
+        cursor: pointer;
+    }
+    &__arrow.goLeft {
+        left: 0;
+        padding-left: 3vw;
+        border-radius: 0 3.5vw 3.5vw 0;
+        background: url("../images/icons/arrow_left.svg") no-repeat center;
+        background-color: $background-color;
+    }
+    &__arrow.goRight {
+        right: 0;
+        padding-right: 3vw;
+        border-radius: 3.5vw 0 0 3.5vw;
+        background: url("../images/icons/arrow_right.svg") no-repeat center;
+        background-color: $background-color;
+    }
+    .characterSlider {
+        margin: 10vh 0;
+        padding: 5vw 0;
         position: relative;
+        height: 14vw;
         overflow: hidden;
-    
         &__container {
             position: absolute;
             display: flex;
-            transition: ease-in 0.3s all;
-            will-change: left;
-
-            img{
-                width: 70px;
-                height: auto;
-                
-                
+            left: 26vw;
+            top: 5vw;
+            transition: left .3s;
+            &__item {
+                height: 14vw;
+                width: 14vw;
+                margin: 0 7vw;
+                position: static;
+                transform: none;
+                transform-origin: center;
             }
-      }
+          &__item.focus {
+              transform: scale(1.5);
+          }
+        }
     }
-
-
-
-    .previous {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        background: green;
-        padding: 10px;
-        border-radius: 50%;
-    }
-      
-    .next {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        background: green;
-        padding: 10px;
-        border-radius: 50%;
-    }
-
 }
-
-
 

@@ -4,51 +4,24 @@ Aurélien
 -----------
 */
 
-const slider = element('.slider')
-const sliderImages = elements(".slider__container img")
-const sliderContainer = element('.slider__container')
-const previousButton = element(".previous")
-const nextButton = element('.next')
+const sliderGoLeft = element("#sliderGoLeft")
+const sliderGoRight = element("#sliderGoRight")
+const sliderContainer = element('.characterSlider__container')
+const characters = elements('.characterSlider__container__item')
+let sliderPos = 0
 
-let step = -500,
-  time = 5000,
-  pos = 0,
-  slide
+sliderGoLeft.addEventListener('click',function (e) {
+    actualizeSliderPosition(e,(sliderPos > 0) ? sliderPos - 1 : sliderPos)
+})
 
+sliderGoRight.addEventListener('click',function (e) {
+    actualizeSliderPosition(e,(sliderPos < 5) ? sliderPos + 1 : sliderPos)
+})
 
-function slideInterval() {
-  slide = setInterval(
-    function () {
-      pos = (pos + 1) % sliderImages.length
-      sliderContainer.style.left = pos * step + 'px'
-    },
-    time
-  )
+function actualizeSliderPosition(e,newPos){
+    e.preventDefault()
+    characters[sliderPos].classList.remove("focus")
+    sliderPos = newPos
+    characters[sliderPos].classList.add("focus")
+    sliderContainer.style.left = 26 - (28 * sliderPos) + "vw"
 }
-
-sliderContainer.addEventListener("mouseover", function () {
-  clearInterval(slide)
-})
-
-sliderContainer.addEventListener("mouseout", function () {
-  slideInterval()
-})
-
-previousButton.addEventListener(
-  'click',
-  function () {
-    pos = pos - 1
-    if (pos < 0) {
-      pos = sliderImages.length - 1
-    }
-    sliderContainer.style.left = pos * step + 'px'
-  }
-)
-
-nextButton.addEventListener(
-  'click',
-  function () {
-    pos = (pos + 1) % sliderImages.length
-    sliderContainer.style.left = pos * step + 'px'
-  }
-)
