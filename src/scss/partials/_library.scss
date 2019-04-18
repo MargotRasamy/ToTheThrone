@@ -9,10 +9,18 @@ h2 {
   text-align: center;
 }
 h3 {
+  font-size: $font-size-title;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h4 {
   font-size: $font-size-body;
   font-weight: normal;
   margin-top: 30px;
   margin-bottom: 0;
+  text-align: center;
 }
 .bigText {
   font-size: 84px;
