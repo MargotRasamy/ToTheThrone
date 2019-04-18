@@ -67,6 +67,13 @@ function keyPress(code){
 function hideHelp(){
     element('#help').style.top = "-10vw"
 }
+let swipeDetector = new Swipe('#game')
+swipeDetector.onRight(gameManager.goRight())
+swipeDetector.onDown(gameManager.goBottom())
+swipeDetector.onLeft(gameManager.goLeft())
+swipeDetector.onUp(gameManager.goTop())
+swipeDetector.run()
+
 
 changeCharacterButton.addEventListener('click',function (e) {
     e.preventDefault()
