@@ -1,6 +1,6 @@
 /*
 -----------
-Aurélien
+Slider
 -----------
 */
 
@@ -15,7 +15,7 @@ sliderGoLeft.addEventListener('click',function (e) {
 })
 
 sliderGoRight.addEventListener('click',function (e) {
-    actualizeSliderPosition(e,(sliderPos < 5) ? sliderPos + 1 : sliderPos)
+    actualizeSliderPosition(e,(sliderPos < characters.length - 1) ? sliderPos + 1 : sliderPos)
 })
 
 function actualizeSliderPosition(e,newPos){
