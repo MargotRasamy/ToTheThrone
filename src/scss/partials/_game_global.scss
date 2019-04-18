@@ -63,15 +63,15 @@
         background: transparent;
       }
       &__elem1 { // Case chemin libre
-        background: url("../images/elements/game_case.png") center 100% no-repeat !important;
+        background: url("../images/elements/game_case.jpg") center 100% no-repeat !important;
         background-size: 100% 100% !important;
       }
       &__elem2 { // Case chemin pièce
-        background: url("../images/elements/coin_case.png") center 100% no-repeat;
+        background: url("../images/elements/coin_case.jpg") center 100% no-repeat;
         background-size: 100% 100%;
       }
       &__elem3 { // Case mur étoile
-        background: url("../images/elements/star_case.png") center 100% no-repeat;
+        background: url("../images/elements/star_case.jpg") center 100% no-repeat;
         background-size: 100% 100%;
       }
       &__elem4 { // Case mur horizontal droite
@@ -111,7 +111,7 @@
         background-size: 100% 100%;
       }
       &__elem13 { // Case mort immédiate
-        background: url("../images/elements/death_case.png") center 100% no-repeat;
+        background: url("../images/elements/death_case.jpg") center 100% no-repeat;
         background-size: 100% 100%;
       }
       &__elem14 { // Case mur mortel
