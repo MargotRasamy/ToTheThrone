@@ -1,0 +1,49 @@
+@media all and (orientation: portrait) {
+    .mainLogo {
+        width: 80vw;
+        height: auto;
+    }
+    .videoSection {
+        margin: 1vh 0;
+        &__Iframe {
+            width: 80vw;
+            height: 44.9vw;
+        }
+    }
+    .gameInfoContainer {
+        flex-direction: column;
+        &__mediumImage {
+            width: 80vw;
+        }
+        &__visual {
+            width: 80vw;
+            &__screen {
+                width: 60vw;
+                height: 40vw;
+            }
+            &__exemples {
+                width: 10vw;
+                padding: 0 4vw 0 6vw;
+            }
+        }
+    }
+    .gameCharacters__arrow {
+        height: 8vh;
+        width: 7vh;
+    }
+    .topScores__leaderboard {
+        width: 90vw;
+    }
+    .ctaContainer {
+        padding: 5vh 0;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    p.withMargeLeft, p.withMargeRight {
+        margin: 30px 0;
+    }
+    p.reducedWidth {
+        padding: 0;
+    }
+}

@@ -1,24 +1,28 @@
 .footer{
-    background-color: grey;
+    background-color: $background-color;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;   
-    
-
+    justify-content: space-between;
+    padding: 5vh 10vw;
     &__bigDiv{
-        padding: 12px;
         display: flex;
         flex-direction: column;
+        &__social {
+            display: flex;
+            align-items: center;
+        }
     }
     &__bigDiv a:not(.secondary-button){
-        padding: 3px;
-        color: black;
+        padding-bottom: 15px;
+        color: #ffffff;
         text-decoration: none;
+        margin: 0 10px;
+        transition: color .2s;
+    }
+    &__bigDiv a:not(.secondary-button):hover {
+        color: $color-primary;
     }
     &__bigDiv img{
         width: 50px;
     }
-        
-
-
 }
