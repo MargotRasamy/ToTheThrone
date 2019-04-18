@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46dc77fa-1f74-413f-98ed-d71656f3b471" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/elements/zqsd.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/background/game/game_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/background/website/mountain_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/partials/_landing_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/_landing_page.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,17 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="3418">
               <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/partials/_footer.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -57,12 +50,12 @@
         <entry file="file://$PROJECT_DIR$/src/scss/_config.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="52">
-              <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="37" />
+              <caret line="2" column="37" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/partials/_responsive.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="688">
@@ -93,8 +86,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/partials/_landing_page.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2184">
-              <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
+            <state relative-caret-position="286">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -103,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/src/scripts/game/9_launchGame.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="455">
-              <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -188,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/scripts/game/Grid_class.js" />
         <option value="$PROJECT_DIR$/src/scripts/game/Player_class.js" />
         <option value="$PROJECT_DIR$/src/scripts/game/GridManager_class.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/scripts/game/launchGame.js" />
         <option value="$PROJECT_DIR$/src/scripts/game/1_Grid_class.js" />
@@ -205,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/scripts/game/2_Player_class.js" />
         <option value="$PROJECT_DIR$/src/scss/partials/_game_characters.scss" />
         <option value="$PROJECT_DIR$/src/scripts/landing_page/userScore.js" />
-        <option value="$PROJECT_DIR$/src/scss/partials/_landing_page.scss" />
         <option value="$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js" />
         <option value="$PROJECT_DIR$/game.html" />
         <option value="$PROJECT_DIR$/src/scss/partials/_game_global.scss" />
@@ -217,6 +217,8 @@
         <option value="$PROJECT_DIR$/src/scripts/game/1_Swipe_class.js" />
         <option value="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" />
         <option value="$PROJECT_DIR$/src/scss/partials/_responsive.scss" />
+        <option value="$PROJECT_DIR$/src/scss/partials/_landing_page.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -244,24 +246,6 @@
               <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -318,7 +302,7 @@
       <updated>1555317503442</updated>
       <workItem from="1555317506227" duration="41981000" />
       <workItem from="1555484755820" duration="14297000" />
-      <workItem from="1555566828201" duration="18932000" />
+      <workItem from="1555566828201" duration="19161000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialization with gulp">
       <created>1555320655186</created>
@@ -579,11 +563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555610137472</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Help zqsd">
+      <created>1555610521768</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1555610521768</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75210000" />
+    <option name="totallyTimeSpent" value="75439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -679,7 +670,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- Choose a character interface creation" />
     <MESSAGE value="- Launch game from character selection" />
     <MESSAGE value="- Movement management fully completed" />
     <MESSAGE value="- Management case visited by the player" />
@@ -704,7 +694,8 @@
     <MESSAGE value="Responsive" />
     <MESSAGE value="Responsive game" />
     <MESSAGE value="Responsive game with swipe movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Responsive game with swipe movement" />
+    <MESSAGE value="Help zqsd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Help zqsd" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/scripts/romain.min.js" />
@@ -719,13 +710,6 @@
     <entry file="file://$PROJECT_DIR$/src/scripts/game/Player_class.js" />
     <entry file="file://$PROJECT_DIR$/src/scripts/game/GridManager_class.js" />
     <entry file="file://$PROJECT_DIR$/src/scripts/game/launchGame.js" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -903,13 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_footer.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -932,13 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/partials/_landing_page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -956,7 +926,7 @@
     <entry file="file://$PROJECT_DIR$/src/scripts/game/9_launchGame.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
-          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -966,7 +936,14 @@
     <entry file="file://$PROJECT_DIR$/src/scss/_config.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
-          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="37" />
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3418">
+          <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -974,6 +951,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="688">
           <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/partials/_landing_page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
