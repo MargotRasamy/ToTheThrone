@@ -2,7 +2,6 @@ header{
     background-image:url("../images/background/website/mountain_background.png");
     padding: 15vh 0 10vh 0;
     background-size: cover;
-    background-position-y: -30vh;
     background-attachment: fixed;
 }
 
@@ -79,4 +78,9 @@ header{
             margin-bottom: 0;
         }
     }
+}
+#userScore {
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
 }

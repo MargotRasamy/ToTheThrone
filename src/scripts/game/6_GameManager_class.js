@@ -65,20 +65,16 @@ class GameManager {
                 if (relativeMaxPosX > 10) {
                     gridIndex++ // On passe à la grille suivante
                     relativeMaxPosX = 0 // On revient à la première colonne de la grille suivante
-                    // Si on a pas assez de grilles en place -> en générer
-                    while (this.grids.length < gridIndex + 3) {
+                    while (this.grids.length < gridIndex + 3) { // Si on a pas assez de grilles en place -> en générer
                         this.generateANewGrid()
                     }
                 }
                 cases.push([gridIndex,this.player.posY,relativeMaxPosX])
-            } else {
-                isAbleToContinue = false
-            }
+            } else { isAbleToContinue = false }
         }
         let oldPosX = this.player.posX
         this.player.setNewPosX(relativeMaxPosX,gridIndex) // Change la position sur X de l'utilisateur
-        let deltaPos = oldPosX - this.player.posX
-        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX + 1],deltaPos)
+        this.actualizeDisplay(cases,[gridIndex,this.player.posY,relativeMaxPosX + 1], (oldPosX - this.player.posX))
     }
 
     goLeft(){
@@ -263,6 +259,9 @@ class GameManager {
         let oldScore = parseInt(localStorage.getItem(KEY_tttScore))
         if (oldScore < score || isNaN(oldScore)){
             localStorage.setItem(KEY_tttScore,score)
+            element('#titleYourScore').innerHTML = "Your new best score :"
+        } else {
+            element('#titleYourScore').innerHTML = "Your score :"
         }
         this.deathTime = null
         setTimeout(function () {
