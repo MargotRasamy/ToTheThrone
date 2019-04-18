@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46dc77fa-1f74-413f-98ed-d71656f3b471" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/game/1_Swipe_class.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/elements/zqsd.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/partials/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/_responsive.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,15 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,10 +54,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scss/_config.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scss/partials/_responsive.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="78" column="21" lean-forward="true" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+            <state relative-caret-position="688">
+              <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -99,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/game/9_launchGame.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="455">
@@ -213,10 +213,10 @@
         <option value="$PROJECT_DIR$/src/scss/partials/_footer.scss" />
         <option value="$PROJECT_DIR$/src/scss/main.scss" />
         <option value="$PROJECT_DIR$/src/scss/partials/_library.scss" />
-        <option value="$PROJECT_DIR$/src/scss/partials/_responsive.scss" />
         <option value="$PROJECT_DIR$/src/scss/partials/_header.scss" />
         <option value="$PROJECT_DIR$/src/scripts/game/1_Swipe_class.js" />
         <option value="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" />
+        <option value="$PROJECT_DIR$/src/scss/partials/_responsive.scss" />
       </list>
     </option>
   </component>
@@ -248,33 +248,20 @@
             <path>
               <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="elements" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,7 +318,7 @@
       <updated>1555317503442</updated>
       <workItem from="1555317506227" duration="41981000" />
       <workItem from="1555484755820" duration="14297000" />
-      <workItem from="1555566828201" duration="18741000" />
+      <workItem from="1555566828201" duration="18932000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialization with gulp">
       <created>1555320655186</created>
@@ -585,11 +572,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555609889846</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Responsive game with swipe movement">
+      <created>1555610137472</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1555610137472</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75019000" />
+    <option name="totallyTimeSpent" value="75210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -685,7 +679,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- Visual managment charcter goToDeath" />
     <MESSAGE value="- Choose a character interface creation" />
     <MESSAGE value="- Launch game from character selection" />
     <MESSAGE value="- Movement management fully completed" />
@@ -710,7 +703,8 @@
     <MESSAGE value="ZQSD help added" />
     <MESSAGE value="Responsive" />
     <MESSAGE value="Responsive game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Responsive game" />
+    <MESSAGE value="Responsive game with swipe movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive game with swipe movement" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/scripts/romain.min.js" />
@@ -866,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/_config.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_game_characters.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -945,13 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/partials/_responsive.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="78" column="21" lean-forward="true" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_landing_page.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2184">
@@ -980,6 +960,20 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_config.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/partials/_responsive.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
         </state>
       </provider>
     </entry>
