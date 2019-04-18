@@ -600,7 +600,9 @@ header {
       #endOfTheGame .ctasCollection a.secondary-button, #endOfTheGame .ctasCollection a.primary-button {
         margin: 10px 0; }
   #help {
-    display: none; } }
+    display: none; }
+  header, .topScores, .gameCharacters {
+    background-attachment: initial; } }
 
 @font-face {
   font-family: 'game_of_thronesregular';
