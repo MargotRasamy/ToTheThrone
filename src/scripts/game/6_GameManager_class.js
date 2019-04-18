@@ -159,7 +159,6 @@ class GameManager {
                 this.endOfTheGame(0)
             } else {
                 let timeRemaining = Math.floor((this.deathTime - Date.now())/100)/10
-                console.log(timeRemaining)
                 let danger = (timeRemaining <= 1.4) ? ' dangerous' : ''
                 let bigDanger = (timeRemaining <= 0.7) ? ' bigText' : ''
                 this.timeRemainingLabel.innerHTML = "<div class='time" + danger + bigDanger + "'>"+ timeRemaining +"s</div>before death"

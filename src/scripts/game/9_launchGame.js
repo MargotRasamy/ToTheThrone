@@ -34,6 +34,7 @@ playNowButton.addEventListener('click',function (e) {
 })
     
 document.onkeypress = function (e) {
+    console.log(e)
     if (gameManager.player.isAlive){
         keyPress(e.code)
     }
@@ -45,19 +46,26 @@ function keyPress(code){
     } else {
         switch (code) {
             case "KeyW":
+                hideHelp()
                 gameManager.goTop()
                 break
             case "KeyA":
+                hideHelp()
                 gameManager.goLeft()
                 break
             case "KeyS":
+                hideHelp()
                 gameManager.goBottom()
                 break
             case "KeyD":
+                hideHelp()
                 gameManager.goRight()
                 break
         }
     }
+}
+function hideHelp(){
+    element('#help').style.top = "-10vw"
 }
 
 changeCharacterButton.addEventListener('click',function (e) {
