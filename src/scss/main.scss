@@ -20,3 +20,6 @@ body {
   font-family: $font-primary;
   font-size: $font-size-body;
 }
+body.unscrollableBody {
+  overflow: hidden;
+}
