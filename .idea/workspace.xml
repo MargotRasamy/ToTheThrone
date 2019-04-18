@@ -3,9 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="46dc77fa-1f74-413f-98ed-d71656f3b471" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/background/game/game_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/background/game/game_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/background/website/dragon_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/background/website/dragon_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/background/website/mountain_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/background/website/mountain_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/background/website/throne_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/background/website/throne_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elements/coin.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/elements/coin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elements/coin_case.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/elements/coin_case.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elements/death_case.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/elements/death_case.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elements/death_wall.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/elements/death_wall.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elements/game_case.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/elements/game_case.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elements/star.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/elements/star.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/elements/star_case.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/elements/star_case.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/landing_page/coins_screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/landing_page/coins_screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/landing_page/example_screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/landing_page/example_screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/landing_page/to_the_throne_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/landing_page/to_the_throne_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/landing_page/traps_screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/landing_page/traps_screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/landing_page/wasd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/landing_page/wasd.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/walls/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/walls/wall.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/game.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/game/2_Player_class.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/game/2_Player_class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/landing_page/margot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/landing_page/romain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/landing_page/sandro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/partials/_game_characters.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/_game_characters.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/partials/_game_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/_game_global.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,13 +45,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="225">
+              <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="598">
@@ -39,20 +63,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="28" column="83" selection-start-line="28" selection-start-column="83" selection-end-line="28" selection-end-column="83" />
+            <state relative-caret-position="372">
+              <caret line="53" column="100" selection-start-line="53" selection-start-column="100" selection-end-line="53" selection-end-column="100" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/main.js">
+        <entry file="file://$PROJECT_DIR$/src/scss/partials/_game_characters.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="588">
+              <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+              <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+              <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+              <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+              <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -60,8 +86,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/partials/_game_global.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="472">
+              <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scripts/game/2_Player_class.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="176" column="40" lean-forward="true" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="40" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#lastGrid#0;n#GameManager#0" />
+                <element signature="n#!!block;n#isCaseAvalaible#0;n#GameManager#0" />
+                <element signature="n#!!block;n#goRight#0;n#GameManager#0" />
+                <element signature="n#!!block;n#goLeft#0;n#GameManager#0" />
+                <element signature="n#!!block;n#goTop#0;n#GameManager#0" />
+                <element signature="n#!!block;n#goBottom#0;n#GameManager#0" />
+                <element signature="n#!!block;n#transformSpecialCaseToNormalCase#0;n#GameManager#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/game/9_launchGame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1690">
-              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            <state relative-caret-position="239">
+              <caret line="24" column="101" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -90,12 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>11</find>
-      <find>mainCharacter</find>
-      <find>gameGridContainer</find>
-      <find>this.counter</find>
-      <find>this.matrices</find>
-      <find>pieces</find>
       <find>piece</find>
       <find>coins</find>
       <find>launc</find>
@@ -120,6 +168,12 @@
       <find>SCORE</find>
       <find>SCORE@</find>
       <find>10</find>
+      <find>.big</find>
+      <find>rem</find>
+      <find>rema</find>
+      <find>id</find>
+      <find>arya</find>
+      <find>launchTime</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,11 +216,7 @@
         <option value="$PROJECT_DIR$/src/scss/partials/_chooseYourCharacter.scss" />
         <option value="$PROJECT_DIR$/src/scripts/game/0_Player_class.js" />
         <option value="$PROJECT_DIR$/src/scripts/game/2_GridManager_class.js" />
-        <option value="$PROJECT_DIR$/src/scss/partials/_endOfTheGame.scss" />
-        <option value="$PROJECT_DIR$/src/scss/partials/_game_characters.scss" />
         <option value="$PROJECT_DIR$/src/scripts/game/4_Grid_class.js" />
-        <option value="$PROJECT_DIR$/src/scripts/game/2_Player_class.js" />
-        <option value="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" />
         <option value="$PROJECT_DIR$/src/scss/partials/_header.scss" />
         <option value="$PROJECT_DIR$/src/scripts/landing_page/slider.js" />
         <option value="$PROJECT_DIR$/src/scss/partials/_characterSlider.scss" />
@@ -175,11 +225,15 @@
         <option value="$PROJECT_DIR$/src/scss/partials/_library.scss" />
         <option value="$PROJECT_DIR$/src/scss/partials/_landing_page.scss" />
         <option value="$PROJECT_DIR$/src/scripts/main.js" />
-        <option value="$PROJECT_DIR$/src/scss/partials/_game_global.scss" />
-        <option value="$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/game.html" />
         <option value="$PROJECT_DIR$/src/scss/main.scss" />
+        <option value="$PROJECT_DIR$/src/scss/partials/_endOfTheGame.scss" />
+        <option value="$PROJECT_DIR$/src/scss/partials/_game_global.scss" />
+        <option value="$PROJECT_DIR$/game.html" />
+        <option value="$PROJECT_DIR$/src/scripts/game/9_launchGame.js" />
+        <option value="$PROJECT_DIR$/src/scripts/game/2_Player_class.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/scss/partials/_game_characters.scss" />
+        <option value="$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js" />
       </list>
     </option>
   </component>
@@ -246,20 +300,14 @@
               <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ToTheThrone" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToTheThrone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,7 +364,7 @@
       <updated>1555317503442</updated>
       <workItem from="1555317506227" duration="41981000" />
       <workItem from="1555484755820" duration="14297000" />
-      <workItem from="1555566828201" duration="11832000" />
+      <workItem from="1555566828201" duration="13752000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialization with gulp">
       <created>1555320655186</created>
@@ -528,11 +576,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555590512504</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="buf fixes :fire:">
+      <created>1555590705768</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1555590705768</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68110000" />
+    <option name="totallyTimeSpent" value="70030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -562,7 +617,7 @@
     <layout-to-restore>
       <window_info id="Gulp" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4993498" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4993498" visible="true" weight="0.24947146" />
       <window_info id="npm" order="3" sideWeight="0.50065017" side_tool="true" weight="0.24947146" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" />
@@ -628,7 +683,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Adding images folder" />
     <MESSAGE value="File names correction &amp; Beginning of the game principles" />
     <MESSAGE value="- Character orientation management" />
     <MESSAGE value="- GoRight function is working" />
@@ -653,7 +707,8 @@
     <MESSAGE value="- Layout landing" />
     <MESSAGE value="- Leaderboard" />
     <MESSAGE value="- Better gameplay and full screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Better gameplay and full screen" />
+    <MESSAGE value="buf fixes :fire:" />
+    <option name="LAST_COMMIT_MESSAGE" value="buf fixes :fire:" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/scripts/_main.min.js" />
@@ -663,31 +718,7 @@
     <entry file="file://$PROJECT_DIR$/assets/scripts/margot.min.js" />
     <entry file="file://$PROJECT_DIR$/assets/scripts/all.min.js" />
     <entry file="file://$PROJECT_DIR$/src/scripts/game/aurelien.js" />
-    <entry file="file://$PROJECT_DIR$/src/scripts/landing_page/margot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/game/sandro.js" />
-    <entry file="file://$PROJECT_DIR$/src/scripts/landing_page/sandro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/landing_page/romain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/landing_page/aurelien.js" />
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_footer.scss">
       <provider selected="true" editor-type-id="text-editor" />
@@ -730,20 +761,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_gameInformations.scss" />
-    <entry file="file://$PROJECT_DIR$/src/scss/partials/_game_characters.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/partials/_endOfTheGame.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/styles/main.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -777,13 +794,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/game/2_Player_class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1976">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -828,17 +838,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/partials/_library.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="66" column="26" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_landing_page.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/partials/_endOfTheGame.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -852,30 +862,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/partials/_library.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/partials/_game_global.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="472">
+          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/game/9_launchGame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1690">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        <state relative-caret-position="239">
+          <caret line="24" column="101" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js">
+    <entry file="file://$PROJECT_DIR$/src/scripts/game/2_Player_class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3614">
-          <caret line="260" column="8" selection-start-line="260" selection-start-column="8" selection-end-line="260" selection-end-column="29" />
+        <state relative-caret-position="413">
+          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/landing_page/margot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="n#!!block;n#launchNewGame#0;n#GameManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/landing_page/romain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/landing_page/sandro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="53" column="100" selection-start-line="53" selection-start-column="100" selection-end-line="53" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/partials/_game_characters.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+          <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+          <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+          <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/game/6_GameManager_class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="176" column="40" lean-forward="true" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#lastGrid#0;n#GameManager#0" />
             <element signature="n#!!block;n#isCaseAvalaible#0;n#GameManager#0" />
             <element signature="n#!!block;n#goRight#0;n#GameManager#0" />
@@ -884,27 +964,6 @@
             <element signature="n#!!block;n#goBottom#0;n#GameManager#0" />
             <element signature="n#!!block;n#transformSpecialCaseToNormalCase#0;n#GameManager#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="83" selection-start-line="28" selection-start-column="83" selection-end-line="28" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -30,7 +30,6 @@ class GameManager {
         this.generateANewGrid()
         this.generateANewGrid()
         this.generateANewGrid()
-        this.launchTime = Date.now()
     }
 
     generateANewGrid() {
@@ -159,17 +158,24 @@ class GameManager {
     actualizeTimeBeforeDeath(){
         if (this.deathTime != null){
             if (this.deathTime - Date.now() <= 0) {
-                this.timeRemainingLabel.innerHTML = "It's time to death"
+                this.timeRemainingLabel.innerHTML = "It's death time"
                 this.winter.style.width = "150vw";
                 this.endOfTheGame(0)
             } else {
-                this.timeRemainingLabel.innerHTML = Math.floor((this.deathTime - Date.now())/100)/10 +"s before death"
+                let timeRemaining = Math.floor((this.deathTime - Date.now())/100)/10
+                console.log(timeRemaining)
+                let danger = (timeRemaining <= 1.4) ? ' dangerous' : ''
+                let bigDanger = (timeRemaining <= 0.7) ? ' bigText' : ''
+                this.timeRemainingLabel.innerHTML = "<div class='time" + danger + bigDanger + "'>"+ timeRemaining +"s</div>before death"
                 this.winter.style.width = 100 - 50 * ((this.deathTime - Date.now())/this.lifeSpan) + "vw"
             }
         }
     }
 
     actualizeDisplay(cases,nextCase,delta){
+        if (this.deathTime == null){
+            this.launchTime = Date.now()
+        }
         this.player.showMovementEffect(Math.abs(delta))
         if (delta != 0){
             let timeRemovedMs = Math.log(this.player.movementCounter) - Math.log10(this.player.movementCounter)

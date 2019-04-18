@@ -34,7 +34,7 @@ class Player {
     }
 
     changeCharacter(newCharacterId){
-        this.character.setAttribute('id',newCharacterId)
+        this.character.setAttribute('data-character',newCharacterId)
     }
 
     goToDeath(){

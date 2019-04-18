@@ -67,21 +67,21 @@
   height: 100%;
   width: 100%;
 }
-.characterContainer#jon .character {
+.characterContainer[data-character="jon"] .character {
   background: url("../images/characters/john_snow.svg") center 100% no-repeat;
 }
-.characterContainer#arya .character {
+.characterContainer[data-character="arya"] .character {
   background: url("../images/characters/arya_stark.svg") center 100% no-repeat;
 }
-.characterContainer#cersey .character {
+.characterContainer[data-character="cersey"] .character {
   background: url("../images/characters/cersey_lannister.svg") center 100% no-repeat;
 }
-.characterContainer#tyrion .character {
+.characterContainer[data-character="tyrion"] .character {
   background: url("../images/characters/tyrion_lannister.svg") center 100% no-repeat;
 }
-.characterContainer#daenerys .character {
+.characterContainer[data-character="daenerys"] .character {
   background: url("../images/characters/daenerys_targaryen.svg") center 100% no-repeat;
 }
-.characterContainer#bronn .character {
+.characterContainer[data-character="bronn"] .character {
   background: url("../images/characters/bronn.svg") center 100% no-repeat;
 }
