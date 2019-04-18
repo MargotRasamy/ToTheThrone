@@ -22,7 +22,7 @@ for (let i = 0; i < characters.length; i++) {
             let selectedElem = element(".characters__character.selected")
             characters[i].classList.add('selected')
             selectedElem.classList.remove('selected')
-            gameManager.player.changeCharacter(characters[i].children[0].getAttribute("id"))
+            gameManager.player.changeCharacter(characters[i].children[0].getAttribute("data-character"))
         }
     )
 }

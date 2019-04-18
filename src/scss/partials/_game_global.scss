@@ -44,11 +44,24 @@
   }
   #timeRemaining {
     position: absolute;
-    z-index: 10;
+    z-index: 15;
     left: 50%;
-    top: 20%;
+    top: 10%;
     transform: translate(-50%,-50%);
-    font-size: $font-size-title;
+    font-size: $font-size-body;
+    color: $background-color;
+    text-align: center;
+    .time {
+      font-size: $font-size-title;
+      transition: color .1s;
+    }
+    .time.dangerous {
+      color: darkred;
+    }
+    .time.dangerous.bigText {
+      font-size: 84px;
+      font-weight: bold;
+    }
   }
   #gameGridContainer {
     display: flex;
